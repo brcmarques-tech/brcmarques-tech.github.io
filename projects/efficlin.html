@@ -46,7 +46,7 @@
         <div class="item"><div class="k">Função</div><div class="v">Full Stack Dev · DevOps</div></div>
         <div class="item"><div class="k">Backend</div><div class="v">NestJS · GraphQL · TypeORM</div></div>
         <div class="item"><div class="k">Frontend</div><div class="v">Next.js · React · Apollo</div></div>
-        <div class="item"><div class="k">Escala</div><div class="v">95 entidades · 85+ rotas</div></div>
+        <div class="item"><div class="k">Escala</div><div class="v">89 entidades · 82 rotas</div></div>
         <div class="item"><div class="k">Live</div><div class="v"><a href="https://efficlin.com.br" target="_blank" rel="noopener">efficlin.com.br ↗</a></div></div>
       </div>
     </div>
@@ -73,16 +73,18 @@
       <h2 class="r">O que eu construí</h2>
       <p class="r">Atuei como engenheiro full stack e DevOps da plataforma — da modelagem de dados ao deploy em produção:</p>
       <ul class="r">
-        <li><strong>Backend (NestJS + Apollo + TypeORM + PostgreSQL 13):</strong> <strong>95 entidades</strong>, <strong>75+ módulos</strong> e <strong>57 resolvers GraphQL</strong> (~900 KB de schema) cobrindo agenda, prontuário, faturamento e CRM.</li>
-        <li><strong>Frontend (Next.js + React + Apollo Client):</strong> <strong>85+ rotas</strong>, design system híbrido (Chakra UI + Ant Design), formulários complexos (React Final Form) e editor rich-text (Tiptap).</li>
-        <li><strong>Multi-tenancy:</strong> isolamento de dados por clínica, com escala para múltiplas especialidades no mesmo core.</li>
+        <li><strong>Backend (NestJS + Apollo + TypeORM + PostgreSQL):</strong> <strong>89 entidades</strong>, <strong>74 módulos</strong>, <strong>51 resolvers GraphQL</strong> e <strong>53 migrações</strong> cobrindo agenda, prontuário, faturamento e CRM — com camada de CRUD GraphQL automático (nestjs-query) reaproveitada em centenas de tipos.</li>
+        <li><strong>Frontend (Next.js + React + Apollo Client):</strong> <strong>82 rotas</strong> sobre uma biblioteca própria de componentes em <strong>atomic design</strong>, design system híbrido (Chakra UI + Ant Design) e formulários complexos (React Final Form).</li>
+        <li><strong>Avaliação anatômica em canvas:</strong> o desenho do corpo clicável é construído com <strong>react-konva</strong> — o fisioterapeuta marca pontos e desenha sobre a imagem para registrar a evolução.</li>
+        <li><strong>Multi-tenancy real:</strong> isolamento de dados por empresa (company-scoping) via hooks e guards, com escala para múltiplas especialidades no mesmo core.</li>
+        <li><strong>Tempo real & infra:</strong> GraphQL Subscriptions, Redis (cache/filas), Sentry e reCAPTCHA.</li>
       </ul>
 
       <h2 class="r">Integrações</h2>
       <ul class="r">
         <li><strong>Pagar.me:</strong> cobrança recorrente — planos, ciclos e cupons.</li>
         <li><strong>Twilio:</strong> SMS e WhatsApp para lembretes e confirmações.</li>
-        <li><strong>Google Calendar</strong> · <strong>RD Station CRM</strong> · <strong>AWS S3</strong> (URLs pré-assinadas) · <strong>Puppeteer</strong> (PDFs server-side).</li>
+        <li><strong>Google Calendar</strong> (sincronização de agenda) · <strong>RD Station CRM</strong> · <strong>Puppeteer</strong> (PDFs server-side).</li>
       </ul>
 
       <h2 class="r">DevOps & segurança</h2>
