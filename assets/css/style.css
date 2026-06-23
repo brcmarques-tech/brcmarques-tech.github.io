@@ -145,8 +145,9 @@ body.has-cursor, body.has-cursor * { cursor: none !important; }
 .btn .ar { transition: transform .3s var(--ease); } .btn:hover .ar { transform: translate(4px,-4px); }
 
 /* ---------- HERO ---------- */
-.hero { position: relative; min-height: 100svh; display: flex; align-items: center;
-  padding: 8rem 0 4rem; overflow: hidden; }
+.hero { position: relative; min-height: 100svh; display: flex; flex-direction: column;
+  padding: 8rem 0 2rem; overflow: hidden; }
+.hero > .wrap { margin-block: auto; }
 #hero-canvas { position: absolute; inset: 0; z-index: 0; opacity: 0.9; }
 .hero::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background: radial-gradient(80% 60% at 70% 30%, rgba(59,162,255,0.10), transparent 60%); }
@@ -156,7 +157,7 @@ body.has-cursor, body.has-cursor * { cursor: none !important; }
 .hero h1 .outline { color: transparent; -webkit-text-stroke: 1.5px var(--ink-faint); }
 .lead { font-size: clamp(1.05rem, 1.6vw, 1.4rem); max-width: 50ch; color: var(--ink-dim); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2.4rem; }
-.hero-meta { position: absolute; bottom: 2rem; left: 0; right: 0; z-index: 2; pointer-events: none; }
+.hero-meta { position: static; margin-top: 1.6rem; z-index: 2; }
 .hero-meta .wrap { display: flex; justify-content: space-between; align-items: end; gap: 1rem; flex-wrap: wrap; }
 .hero-meta .item { font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-faint); letter-spacing: 0.08em; }
 .hero-meta .item b { display: block; color: var(--ink); font-size: 0.95rem; margin-top: 0.2rem; font-family: var(--font-sans); }
@@ -388,38 +389,42 @@ figure.full figcaption { font-family: var(--font-mono); font-size: 0.74rem; colo
   .case-meta { grid-template-columns: 1fr; }
 }
 
-/* ---------- DESTAQUE: galeria flutuante (desktop) / carrossel (mobile) ---------- */
-.feat-gallery { position: relative; min-height: clamp(400px, 44vw, 500px);
-  background: radial-gradient(120% 120% at 72% 0%, #16161e, #0a0a0e 66%); }
+/* ---------- DESTAQUE: telas flutuando livres (desktop) / carrossel (mobile) ---------- */
+.feat-gallery { position: relative; min-height: clamp(400px, 44vw, 520px); }
 .fcard { position: absolute; margin: 0; overflow: hidden; background: #000;
-  border: 1px solid var(--line-2); box-shadow: 0 18px 46px rgba(0,0,0,0.55);
-  transition: transform .45s var(--ease), box-shadow .45s var(--ease), border-color .3s; }
+  border: 1px solid var(--line-2); box-shadow: 0 22px 52px rgba(0,0,0,0.6);
+  transition: transform .45s var(--ease), box-shadow .45s var(--ease), border-color .3s;
+  animation: floatY var(--dur, 7s) ease-in-out infinite; will-change: transform; }
 .fcard img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .fcard.web { aspect-ratio: 16 / 10; }  .fcard.web img { object-position: top left; }
 .fcard.phone { aspect-ratio: 9 / 19; } .fcard.phone img { object-position: top center; }
-/* posições flutuando */
-.c1 { width: 57%; top: 5%; left: 1%; z-index: 2; transform: rotate(-2deg); }
-.c2 { width: 21%; max-width: 124px; bottom: 7%; left: 21%; z-index: 5; transform: rotate(2deg); }
-.c3 { width: 48%; right: 2%; bottom: 6%; z-index: 3; transform: rotate(2deg); }
-.c4 { width: 19%; max-width: 112px; top: 8%; right: 8%; z-index: 4; transform: rotate(-3deg); }
-/* hover: avança — cresce, endireita e vem pra frente */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0) rotate(var(--rot)); }
+  50% { transform: translateY(-15px) rotate(calc(var(--rot) + 0.8deg)); }
+}
+/* posições + ritmo de flutuação (cada uma diferente = movimento orgânico) */
+.c1 { width: 57%; top: 6%;  left: 1%;  z-index: 2; --rot: -2deg; --dur: 7s;   animation-delay: -0.5s; }
+.c2 { width: 21%; max-width: 124px; bottom: 8%; left: 21%; z-index: 5; --rot: 2deg;  --dur: 5.5s; animation-delay: -2s; }
+.c3 { width: 48%; right: 2%; bottom: 7%; z-index: 3; --rot: 2deg;  --dur: 8s;   animation-delay: -3.5s; }
+.c4 { width: 19%; max-width: 112px; top: 9%; right: 8%; z-index: 4; --rot: -3deg; --dur: 6s;   animation-delay: -1s; }
+/* hover: avança — cresce, endireita, vem pra frente e pausa o float */
 @media (hover: hover) {
-  .fcard:hover { transform: scale(1.14) rotate(0deg); box-shadow: 0 38px 84px rgba(0,0,0,0.78);
-    border-color: var(--accent); z-index: 9; }
+  .fcard:hover { animation-play-state: paused; transform: scale(1.14) rotate(0deg) !important;
+    box-shadow: 0 40px 90px rgba(0,0,0,0.8); border-color: var(--accent); z-index: 9; }
 }
 .feat-swipe { display: none; }
 
-/* tablet/celular: vira carrossel deslizável com snap */
+/* tablet/celular: vira carrossel deslizável com snap (sem flutuar) */
 @media (max-width: 919px) {
   .feat-gallery { display: flex; gap: 0.9rem; min-height: 0; overflow-x: auto;
     scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
-    padding: 1.3rem; border-top: 1px solid var(--line); scrollbar-width: none; }
+    padding: 0.4rem 0 0.3rem; scrollbar-width: none; }
   .feat-gallery::-webkit-scrollbar { display: none; }
-  .fcard { position: static; flex: 0 0 auto; transform: none; scroll-snap-align: center;
-    box-shadow: 0 16px 38px rgba(0,0,0,0.5); }
+  .fcard { position: static; flex: 0 0 auto; transform: none; animation: none;
+    scroll-snap-align: center; box-shadow: 0 16px 38px rgba(0,0,0,0.5); }
   .fcard.web { width: min(86%, 470px); }
   .fcard.phone { width: min(52%, 240px); max-width: none; }
-  .feat-swipe { display: block; position: absolute; top: 0.7rem; right: 1.1rem; z-index: 6;
+  .feat-swipe { display: block; position: absolute; top: -1.4rem; right: 0.2rem; z-index: 6;
     font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.14em;
     text-transform: uppercase; color: var(--ink-faint); pointer-events: none; }
 }
