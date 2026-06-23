@@ -108,15 +108,26 @@
     const targets = $$(".r, .clip, [data-split]");
     if (!("IntersectionObserver" in window) || REDUCED) {
       targets.forEach((t) => t.classList.add("in"));
-      $$("[data-split]").forEach((t) => t.classList.add("in"));
       return;
     }
     const io = new IntersectionObserver((entries) => {
       entries.forEach((en) => {
         if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    }, { threshold: 0, rootMargin: "0px 0px -6% 0px" });
     targets.forEach((t) => io.observe(t));
+    // safety net via rAF — revela qualquer alvo que entre na viewport, mesmo se o IO não disparar
+    let live = targets.slice();
+    const sweep = () => {
+      live = live.filter((t) => {
+        if (t.classList.contains("in")) { io.unobserve(t); return false; }
+        const r = t.getBoundingClientRect();
+        if (r.top < innerHeight * 0.94 && r.bottom > 0) { t.classList.add("in"); io.unobserve(t); return false; }
+        return true;
+      });
+      if (live.length) requestAnimationFrame(sweep);
+    };
+    requestAnimationFrame(sweep);
   }
 
   /* ---------- SPLIT TEXT (wrap words in lines for reveal) ---------- */
