@@ -385,6 +385,29 @@ figure.full figcaption { font-family: var(--font-mono); font-size: 0.74rem; colo
   .case-meta { grid-template-columns: 1fr; }
 }
 
+/* ---------- DESTAQUE: composição web + mobile (2 telas separadas) ---------- */
+.feat-stage { position: relative; overflow: hidden;
+  background: radial-gradient(130% 110% at 72% 8%, #15151c, #0a0a0e 68%);
+  min-height: clamp(360px, 50vw, 500px); }
+.feat-screen { position: absolute; border: 1px solid var(--line-2); background: #000; overflow: hidden;
+  box-shadow: 0 26px 64px rgba(0,0,0,0.62); }
+.feat-screen img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.feat-desk { top: 8%; right: 3%; width: 66%; aspect-ratio: 16 / 10; }
+.feat-desk img { object-position: top left; }
+.feat-phone { bottom: 8%; left: 4%; width: 25%; max-width: 138px; aspect-ratio: 9 / 19; }
+.feat-phone img { object-position: top center; }
+.feat-tag { position: absolute; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink-faint); }
+.feat-tag.desk { top: calc(8% - 1.1rem); right: 3%; }
+.feat-tag.app { bottom: calc(8% - 1.1rem); left: 4%; }
+@media (max-width: 700px) {
+  .feat-stage { min-height: 0; padding: 1.3rem; display: flex; flex-direction: column; align-items: center; gap: 1.3rem; }
+  .feat-screen { position: static; }
+  .feat-desk { width: 100%; aspect-ratio: 16 / 10; }
+  .feat-phone { width: 56%; max-width: 210px; aspect-ratio: 9 / 19; }
+  .feat-tag { display: none; }
+}
+
 /* ---------- REDUCED MOTION ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
