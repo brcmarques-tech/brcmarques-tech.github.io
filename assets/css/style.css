@@ -255,7 +255,10 @@ section { position: relative; padding: clamp(4rem, 11vw, 9rem) 0; }
 .cap { background: var(--bg); padding: clamp(1.6rem,4vw,2.4rem); display: flex; flex-direction: column; gap: 0.9rem;
   transition: background .4s; }
 .cap:hover { background: var(--surface); }
-.cap .ic { font-size: 1.6rem; }
+.cap .ic { width: 46px; height: 46px; display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line); color: var(--accent); transition: border-color .4s var(--ease), background .4s; }
+.cap .ic svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.cap:hover .ic { border-color: var(--accent); background: rgba(59,162,255,0.07); }
 .cap h4 { font-family: var(--font-disp); font-weight: 700; font-size: 1.2rem; }
 .cap p { color: var(--ink-dim); font-size: 0.92rem; }
 .cap ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.3rem; }
@@ -385,27 +388,40 @@ figure.full figcaption { font-family: var(--font-mono); font-size: 0.74rem; colo
   .case-meta { grid-template-columns: 1fr; }
 }
 
-/* ---------- DESTAQUE: composição web + mobile (2 telas separadas) ---------- */
-.feat-stage { position: relative; overflow: hidden;
-  background: radial-gradient(130% 110% at 72% 8%, #15151c, #0a0a0e 68%);
-  min-height: clamp(360px, 50vw, 500px); }
-.feat-screen { position: absolute; border: 1px solid var(--line-2); background: #000; overflow: hidden;
-  box-shadow: 0 26px 64px rgba(0,0,0,0.62); }
-.feat-screen img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.feat-desk { top: 8%; right: 3%; width: 66%; aspect-ratio: 16 / 10; }
-.feat-desk img { object-position: top left; }
-.feat-phone { bottom: 8%; left: 4%; width: 25%; max-width: 138px; aspect-ratio: 9 / 19; }
-.feat-phone img { object-position: top center; }
-.feat-tag { position: absolute; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--ink-faint); }
-.feat-tag.desk { top: calc(8% - 1.1rem); right: 3%; }
-.feat-tag.app { bottom: calc(8% - 1.1rem); left: 4%; }
-@media (max-width: 700px) {
-  .feat-stage { min-height: 0; padding: 1.3rem; display: flex; flex-direction: column; align-items: center; gap: 1.3rem; }
-  .feat-screen { position: static; }
-  .feat-desk { width: 100%; aspect-ratio: 16 / 10; }
-  .feat-phone { width: 56%; max-width: 210px; aspect-ratio: 9 / 19; }
-  .feat-tag { display: none; }
+/* ---------- DESTAQUE: galeria flutuante (desktop) / carrossel (mobile) ---------- */
+.feat-gallery { position: relative; min-height: clamp(400px, 44vw, 500px);
+  background: radial-gradient(120% 120% at 72% 0%, #16161e, #0a0a0e 66%); }
+.fcard { position: absolute; margin: 0; overflow: hidden; background: #000;
+  border: 1px solid var(--line-2); box-shadow: 0 18px 46px rgba(0,0,0,0.55);
+  transition: transform .45s var(--ease), box-shadow .45s var(--ease), border-color .3s; }
+.fcard img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.fcard.web { aspect-ratio: 16 / 10; }  .fcard.web img { object-position: top left; }
+.fcard.phone { aspect-ratio: 9 / 19; } .fcard.phone img { object-position: top center; }
+/* posições flutuando */
+.c1 { width: 57%; top: 5%; left: 1%; z-index: 2; transform: rotate(-2deg); }
+.c2 { width: 21%; max-width: 124px; bottom: 7%; left: 21%; z-index: 5; transform: rotate(2deg); }
+.c3 { width: 48%; right: 2%; bottom: 6%; z-index: 3; transform: rotate(2deg); }
+.c4 { width: 19%; max-width: 112px; top: 8%; right: 8%; z-index: 4; transform: rotate(-3deg); }
+/* hover: avança — cresce, endireita e vem pra frente */
+@media (hover: hover) {
+  .fcard:hover { transform: scale(1.14) rotate(0deg); box-shadow: 0 38px 84px rgba(0,0,0,0.78);
+    border-color: var(--accent); z-index: 9; }
+}
+.feat-swipe { display: none; }
+
+/* tablet/celular: vira carrossel deslizável com snap */
+@media (max-width: 919px) {
+  .feat-gallery { display: flex; gap: 0.9rem; min-height: 0; overflow-x: auto;
+    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    padding: 1.3rem; border-top: 1px solid var(--line); scrollbar-width: none; }
+  .feat-gallery::-webkit-scrollbar { display: none; }
+  .fcard { position: static; flex: 0 0 auto; transform: none; scroll-snap-align: center;
+    box-shadow: 0 16px 38px rgba(0,0,0,0.5); }
+  .fcard.web { width: min(86%, 470px); }
+  .fcard.phone { width: min(52%, 240px); max-width: none; }
+  .feat-swipe { display: block; position: absolute; top: 0.7rem; right: 1.1rem; z-index: 6;
+    font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink-faint); pointer-events: none; }
 }
 
 /* ---------- REDUCED MOTION ---------- */
