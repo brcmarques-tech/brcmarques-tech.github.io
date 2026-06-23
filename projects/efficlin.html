@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>EffiClin — Case · Bruno Marques</title>
+  <meta name="description" content="EffiClin: SaaS multi-tenant de gestão para clínicas de fisioterapia. Engenharia full stack & DevOps por Bruno Marques — NestJS, GraphQL, Next.js." />
+  <meta name="theme-color" content="#08080a" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a href="../index.html" class="brand">
+        <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="30" height="30" stroke="#3ba2ff" stroke-width="1.5"/>
+          <path d="M9 23V9h7a4 4 0 0 1 0 8H9m7 0 5 6" stroke="#f5f5f4" stroke-width="2.2" stroke-linecap="square"/>
+        </svg>
+        <span>brcmarques<b>.</b>dev</span>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html#projetos">Projetos</a>
+        <a href="../index.html#contato" class="nav-cta" data-magnetic="0.25">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="case-hero">
+    <div class="wrap">
+      <a href="../index.html#projetos" class="back">← Voltar aos projetos</a>
+      <span class="eyebrow r" style="display:flex;margin-top:1.6rem;">SaaS multi-tenant · Saúde · 2024–presente</span>
+      <h1 class="display" data-split>EffiClin</h1>
+      <p class="lead r d2" style="max-width:58ch;">Sistema de gestão completo para clínicas de fisioterapia e profissionais da saúde. Um SaaS multi-tenant de verdade — agenda, prontuário, financeiro e CRM — que engenheirei de ponta a ponta como Full Stack & DevOps.</p>
+
+      <div class="case-meta r d3">
+        <div class="item"><div class="k">Função</div><div class="v">Full Stack Dev · DevOps</div></div>
+        <div class="item"><div class="k">Backend</div><div class="v">NestJS · GraphQL · TypeORM</div></div>
+        <div class="item"><div class="k">Frontend</div><div class="v">Next.js · React · Apollo</div></div>
+        <div class="item"><div class="k">Escala</div><div class="v">95 entidades · 85+ rotas</div></div>
+        <div class="item"><div class="k">Live</div><div class="v"><a href="https://efficlin.com.br" target="_blank" rel="noopener">efficlin.com.br ↗</a></div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="prose">
+      <p class="big r">"Mais tecnologia na gestão, mais humanização no atendimento." A EffiClin tira a clínica do papel e das planilhas — e por trás dela há uma plataforma multi-tenant robusta, que eu construí e mantenho em produção.</p>
+    </div>
+
+    <figure class="full r"><img src="../assets/img/efficlin/landing-top.png" alt="Landing page da EffiClin" loading="lazy" /><figcaption>EffiClin — sistema de gestão para fisioterapeutas e profissionais da saúde.</figcaption></figure>
+
+    <div class="prose">
+      <h2 class="r">O produto</h2>
+      <p class="r">A EffiClin atende <strong>5+ especialidades</strong> (fisioterapia, osteopatia, pilates, RPG e pediatria) num único sistema. Cada clínica é um tenant isolado, com sua própria equipe, agenda, prontuários e financeiro. Destaques de produto:</p>
+      <ul class="r">
+        <li><strong>Avaliação clínica visual:</strong> desenhos anatômicos clicáveis para marcar pontos de dor e acompanhar a evolução do paciente.</li>
+        <li><strong>Agenda automatizada:</strong> agendamento com lembretes e confirmação automática por WhatsApp.</li>
+        <li><strong>Prontuário eletrônico:</strong> fichas customizáveis, histórico e registros clínicos completos.</li>
+        <li><strong>Financeiro completo:</strong> contas a pagar/receber, fluxo de caixa e dashboards.</li>
+        <li><strong>Multiusuário:</strong> equipe colaborando no mesmo ambiente, com controle de acesso.</li>
+      </ul>
+
+      <h2 class="r">O que eu construí</h2>
+      <p class="r">Atuei como engenheiro full stack e DevOps da plataforma — da modelagem de dados ao deploy em produção:</p>
+      <ul class="r">
+        <li><strong>Backend (NestJS + Apollo + TypeORM + PostgreSQL 13):</strong> <strong>95 entidades</strong>, <strong>75+ módulos</strong> e <strong>57 resolvers GraphQL</strong> (~900 KB de schema) cobrindo agenda, prontuário, faturamento e CRM.</li>
+        <li><strong>Frontend (Next.js + React + Apollo Client):</strong> <strong>85+ rotas</strong>, design system híbrido (Chakra UI + Ant Design), formulários complexos (React Final Form) e editor rich-text (Tiptap).</li>
+        <li><strong>Multi-tenancy:</strong> isolamento de dados por clínica, com escala para múltiplas especialidades no mesmo core.</li>
+      </ul>
+
+      <h2 class="r">Integrações</h2>
+      <ul class="r">
+        <li><strong>Pagar.me:</strong> cobrança recorrente — planos, ciclos e cupons.</li>
+        <li><strong>Twilio:</strong> SMS e WhatsApp para lembretes e confirmações.</li>
+        <li><strong>Google Calendar</strong> · <strong>RD Station CRM</strong> · <strong>AWS S3</strong> (URLs pré-assinadas) · <strong>Puppeteer</strong> (PDFs server-side).</li>
+      </ul>
+
+      <h2 class="r">DevOps & segurança</h2>
+      <ul class="r">
+        <li>Pipeline de <strong>CI/CD</strong> próprio e servidores Linux em produção.</li>
+        <li><strong>Migrações TypeORM</strong> em produção, com cuidado de dados.</li>
+        <li><strong>Criptografia em nível de campo</strong> (typeorm-encrypted) para dados sensíveis de saúde.</li>
+      </ul>
+    </div>
+
+    <figure class="full r"><img src="../assets/img/efficlin/landing-mid.png" alt="Seção da landing da EffiClin" loading="lazy" /><figcaption>Posicionamento do produto: gestão ágil e eficiente para a clínica.</figcaption></figure>
+
+    <div class="prose">
+      <h2 class="r">Resultado</h2>
+      <p class="r">Uma plataforma de saúde real, multi-tenant, em produção e usada por clínicas — com a complexidade de um ERP clínico (agenda + prontuário + financeiro + CRM) sustentada por uma arquitetura que eu posso defender linha a linha.</p>
+      <p class="r" style="margin-top:1.8rem;"><a href="https://efficlin.com.br" target="_blank" rel="noopener" class="btn btn-solid" data-magnetic="0.3"><span>Ver o produto</span> <span class="ar">↗</span></a></p>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="divider"></div>
+    <div class="spacer-sm"></div>
+    <a href="procure-job.html" class="prose r" style="display:block;text-decoration:none;">
+      <span class="eyebrow" style="display:flex;">Próximo projeto</span>
+      <span class="display" style="font-size:clamp(2rem,6vw,3.5rem);display:block;margin-top:0.6rem;">Procure.job →</span>
+    </a>
+  </main>
+
+  <footer class="footer" style="margin-top:4rem;">
+    <div class="wrap">
+      <a href="../index.html#projetos" class="back">← Todos os projetos</a>
+      <div class="links">
+        <a href="mailto:bruno@bcmtechdev.com.br">E-mail</a>
+        <a href="https://github.com/brcmarques-tech" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/bruno-marques-2516ab214" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/lenis.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
