@@ -156,7 +156,7 @@ body.has-cursor, body.has-cursor * { cursor: none !important; }
 .hero h1 .outline { color: transparent; -webkit-text-stroke: 1.5px var(--ink-faint); }
 .lead { font-size: clamp(1.05rem, 1.6vw, 1.4rem); max-width: 50ch; color: var(--ink-dim); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2.4rem; }
-.hero-meta { position: absolute; bottom: 2rem; left: 0; right: 0; z-index: 2; }
+.hero-meta { position: absolute; bottom: 2rem; left: 0; right: 0; z-index: 2; pointer-events: none; }
 .hero-meta .wrap { display: flex; justify-content: space-between; align-items: end; gap: 1rem; flex-wrap: wrap; }
 .hero-meta .item { font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-faint); letter-spacing: 0.08em; }
 .hero-meta .item b { display: block; color: var(--ink); font-size: 0.95rem; margin-top: 0.2rem; font-family: var(--font-sans); }
