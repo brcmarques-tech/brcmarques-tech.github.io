@@ -9,6 +9,7 @@
   const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
   const lerp = (a, b, n) => (1 - n) * a + n * b;
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  let lenis = null; // smooth-scroll instance (Lenis)
 
   /* ---------- PRELOADER ---------- */
   const preloader = $(".preloader");
@@ -34,6 +35,7 @@
     if (COARSE) return;
     const dot = $(".cursor-dot"), ring = $(".cursor-ring");
     if (!dot || !ring) return;
+    document.body.classList.add("has-cursor"); // hide native cursor (CSS)
     let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
     addEventListener("mousemove", (e) => { mx = e.clientX; my = e.clientY;
       dot.style.transform = `translate(${mx}px,${my}px) translate(-50%,-50%)`; });
@@ -64,27 +66,25 @@
     });
   }
 
-  /* ---------- SMOOTH SCROLL (lightweight lerp) ---------- */
+  /* ---------- SMOOTH SCROLL (Lenis) ---------- */
   function initSmoothScroll() {
-    if (REDUCED || COARSE) return; // native scroll on touch/reduced
-    let current = window.scrollY, target = window.scrollY, rafId = null, running = false;
-    const ease = 0.085;
-    const max = () => document.documentElement.scrollHeight - innerHeight;
-    function run() {
-      current = lerp(current, target, ease);
-      if (Math.abs(target - current) < 0.4) { current = target; running = false; }
-      window.scrollTo(0, current);
-      if (running) rafId = requestAnimationFrame(run);
-    }
-    addEventListener("wheel", (e) => {
-      if (e.ctrlKey) return;
-      e.preventDefault();
-      target = clamp(target + e.deltaY, 0, max());
-      if (!running) { running = true; current = window.scrollY; run(); }
-    }, { passive: false });
-    // keep target synced when user uses keyboard/scrollbar/anchor
-    addEventListener("scroll", () => { if (!running) { target = window.scrollY; current = window.scrollY; } });
-    addEventListener("resize", () => { target = clamp(target, 0, max()); });
+    // native scroll when reduced-motion or when Lenis failed to load
+    if (REDUCED || typeof window.Lenis !== "function") return;
+    lenis = new window.Lenis({
+      lerp: 0.1,            // catch-up speed — snappy yet smooth
+      wheelMultiplier: 1,
+      smoothWheel: true,
+      syncTouch: false,     // leave touch to native momentum (feels better on mobile)
+      touchMultiplier: 1.6,
+    });
+    let rafId;
+    function raf(time) { lenis.raf(time); rafId = requestAnimationFrame(raf); }
+    rafId = requestAnimationFrame(raf);
+    // pause the rAF loop when tab is hidden
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) cancelAnimationFrame(rafId);
+      else rafId = requestAnimationFrame(raf);
+    });
   }
 
   /* ---------- ANCHOR SMOOTH ---------- */
@@ -96,7 +96,8 @@
         const t = $(id);
         if (!t) return;
         e.preventDefault();
-        t.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "start" });
+        if (lenis) lenis.scrollTo(t, { offset: -70, duration: 1.1 });
+        else t.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "start" });
         history.replaceState(null, "", id);
       });
     });
