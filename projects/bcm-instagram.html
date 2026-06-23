@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Automação Instagram — Case · Bruno Marques</title>
+  <meta name="description" content="Publicação programática no Instagram via Graph API. Case de automação por Bruno Marques." />
+  <meta name="theme-color" content="#08080a" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a href="../index.html" class="brand">
+        <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="30" height="30" stroke="#3ba2ff" stroke-width="1.5"/>
+          <path d="M9 23V9h7a4 4 0 0 1 0 8H9m7 0 5 6" stroke="#f5f5f4" stroke-width="2.2" stroke-linecap="square"/>
+        </svg>
+        <span>brcmarques<b>.</b>dev</span>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html#projetos">Projetos</a>
+        <a href="../index.html#contato" class="nav-cta" data-magnetic="0.25">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="case-hero">
+    <div class="wrap">
+      <a href="../index.html#projetos" class="back">← Voltar aos projetos</a>
+      <span class="eyebrow r" style="display:flex;margin-top:1.6rem;">Automação · Integração de API</span>
+      <h1 class="display" data-split>Automação<br>Instagram</h1>
+      <p class="lead r d2" style="max-width:56ch;">Publicação programática no Instagram da BCM Tecnologias via Instagram Graph API — sem abrir o app, direto da linha de comando.</p>
+
+      <div class="case-meta r d3">
+        <div class="item"><div class="k">Função</div><div class="v">Arquitetura · código</div></div>
+        <div class="item"><div class="k">Stack</div><div class="v">Node.js · Graph API</div></div>
+        <div class="item"><div class="k">Apoio</div><div class="v">Playwright</div></div>
+        <div class="item"><div class="k">Conta</div><div class="v">@bcmtechs</div></div>
+        <div class="item"><div class="k">Status</div><div class="v" style="color:var(--accent)">Em uso</div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="prose">
+      <p class="big r">Manter a marca ativa no Instagram com consistência consome tempo: montar post, legenda, publicar no horário, repetir. Essa ferramenta tira o trabalho manual do caminho.</p>
+
+      <h2 class="r">O problema</h2>
+      <p class="r">Postar com regularidade é o que mantém a marca viva — mas fazer tudo na mão, todo dia, não escala. Cada publicação vira uma sequência de passos repetitivos e sujeitos a esquecimento.</p>
+
+      <h2 class="r">A solução</h2>
+      <p class="r">Uma ferramenta de linha de comando que publica direto na conta da <strong>BCM Tecnologias</strong> usando a <strong>Instagram Graph API</strong> — posts simples e carrosséis, com legenda, de forma programática e repetível.</p>
+
+      <h2 class="r">Como funciona</h2>
+      <ul class="r">
+        <li><strong>Graph API:</strong> autenticação por token de sistema e publicação pelos endpoints oficiais da Meta.</li>
+        <li><strong>Carrosséis:</strong> monta o container de mídia múltipla e publica em um comando.</li>
+        <li><strong>Node.js puro:</strong> scripts <code>testar</code> e <code>publicar</code>, sem dependências pesadas.</li>
+        <li><strong>Playwright:</strong> apoio para fluxos que a API ainda não cobre.</li>
+      </ul>
+
+      <h2 class="r">Resultado</h2>
+      <p class="r">Publicação confiável e repetível, que tira o trabalho manual do caminho e mantém a marca presente — com previsibilidade.</p>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="divider"></div>
+    <div class="spacer-sm"></div>
+    <a href="procure-job.html" class="prose r" style="display:block;text-decoration:none;">
+      <span class="eyebrow" style="display:flex;">Projeto anterior</span>
+      <span class="display" style="font-size:clamp(2rem,6vw,3.5rem);display:block;margin-top:0.6rem;">← Procure.job</span>
+    </a>
+  </main>
+
+  <footer class="footer" style="margin-top:4rem;">
+    <div class="wrap">
+      <a href="../index.html#projetos" class="back">← Todos os projetos</a>
+      <div class="links">
+        <a href="mailto:bcmtechdev@gmail.com">E-mail</a>
+        <a href="https://github.com/brcmarques-tech" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
