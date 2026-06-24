@@ -41,10 +41,23 @@
       else el.innerHTML = out;
     });
     document.documentElement.lang = lang === "pt" ? "pt-BR" : lang;
+    applySeo(lang);
     // estado do seletor
     document.querySelectorAll("[data-lang]").forEach((b) => {
       b.setAttribute("aria-current", b.getAttribute("data-lang") === lang ? "true" : "false");
     });
+  }
+
+  // canonical auto-referente por idioma + og:locale (SEO multilíngue)
+  function applySeo(lang) {
+    const clean = location.origin + location.pathname;
+    const canonUrl = lang === "pt" ? clean : clean + "?lang=" + lang;
+    let canon = document.querySelector('link[rel="canonical"]');
+    if (!canon) { canon = document.createElement("link"); canon.rel = "canonical"; document.head.appendChild(canon); }
+    canon.setAttribute("href", canonUrl);
+    const locale = lang === "en" ? "en_US" : lang === "es" ? "es_ES" : "pt_BR";
+    let ogl = document.querySelector('meta[property="og:locale"]');
+    if (ogl) ogl.setAttribute("content", locale);
   }
 
   function resolveInitial() {
