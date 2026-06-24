@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>O próximo é o seu — Vamos construir? · Bruno Marques</title>
-  <meta name="description" content="Tem uma ideia, um MVP ou um sistema pra tirar do papel? Construo seu produto de ponta a ponta — da ideia ao deploy, rápido com IA e seguro em produção. Bora conversar." />
+  <title data-i18n="np_title">O próximo é o seu — Vamos construir? · Bruno Marques</title>
+  <meta name="description" data-i18n="np_desc" content="Tem uma ideia, um MVP ou um sistema pra tirar do papel? Construo seu produto de ponta a ponta — da ideia ao deploy, rápido com IA e seguro em produção. Bora conversar." />
   <meta name="theme-color" content="#08080a" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,8 +33,13 @@
         <span>brcmarques<b>.</b>dev</span>
       </a>
       <div class="nav-links">
-        <a href="../index.html#projetos">Projetos</a>
-        <a href="../index.html#contato" class="nav-cta" data-magnetic="0.25">Contato</a>
+        <a href="../index.html#projetos" data-i18n="nav_projects">Projetos</a>
+        <a href="../index.html#contato" class="nav-cta" data-magnetic="0.25" data-i18n="nav_contact">Contato</a>
+        <div class="lang" role="group" aria-label="Idioma / Language / Idioma">
+          <button type="button" data-lang="pt">PT</button>
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="es">ES</button>
+        </div>
       </div>
     </div>
   </nav>
@@ -43,40 +48,40 @@
     <div aria-hidden="true" style="position:absolute;inset:0;background:#08080a url('../assets/img/cta/build.jpg') center/cover no-repeat;opacity:0.55;"></div>
     <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(8,8,10,0.93) 0%, rgba(8,8,10,0.62) 52%, rgba(8,8,10,0.85) 100%);"></div>
     <div class="wrap" style="position:relative;z-index:2;">
-      <a href="bcm-shopping.html" class="back">← Voltar ao bcmTech Shopping</a>
-      <span class="eyebrow r" style="display:flex;margin-top:1.6rem;">Próximo case · o seu</span>
-      <h1 class="display" data-split style="font-size:clamp(2.8rem,11vw,8rem);text-transform:uppercase;margin:1.2rem 0;">O próximo<br><span class="accent">é o seu.</span></h1>
-      <p class="lead r d2" style="max-width:56ch;">Você viu os cases. Agora imagina o <strong style="color:var(--ink)">seu produto no ar</strong> — do primeiro rascunho ao deploy, construído por uma pessoa só: rápido com IA e entregue com segurança pra produção.</p>
+      <a href="bcm-shopping.html" class="back" data-i18n="np_back">← Voltar ao bcmTech Shopping</a>
+      <span class="eyebrow r" style="display:flex;margin-top:1.6rem;" data-i18n="np_eyebrow">Próximo case · o seu</span>
+      <h1 class="display" data-split data-i18n="np_h1" style="font-size:clamp(2.8rem,11vw,8rem);text-transform:uppercase;margin:1.2rem 0;">O próximo<br><span class="accent">é o seu.</span></h1>
+      <p class="lead r d2" style="max-width:56ch;" data-i18n="np_lead">Você viu os cases. Agora imagina o <strong style="color:var(--ink)">seu produto no ar</strong> — do primeiro rascunho ao deploy, construído por uma pessoa só: rápido com IA e entregue com segurança pra produção.</p>
       <div class="hero-actions r d3" style="display:flex;flex-wrap:wrap;gap:0.9rem;margin-top:2.4rem;">
-        <a href="https://wa.me/5553991971031?text=Oi%20Bruno!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20tirar%20um%20projeto%20do%20papel." target="_blank" rel="noopener" class="btn btn-solid" data-magnetic="0.3"><span>Chamar no WhatsApp</span> <span class="ar">↗</span></a>
-        <a href="mailto:bruno@bcmtechdev.com.br" class="btn" data-magnetic="0.3"><span>Mandar e-mail</span></a>
+        <a href="https://wa.me/5553991971031?text=Oi%20Bruno!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20tirar%20um%20projeto%20do%20papel." target="_blank" rel="noopener" class="btn btn-solid" data-magnetic="0.3"><span data-i18n="h_cta_wa">Chamar no WhatsApp</span> <span class="ar">↗</span></a>
+        <a href="mailto:bruno@bcmtechdev.com.br" class="btn" data-magnetic="0.3"><span data-i18n="np_btn_email">Mandar e-mail</span></a>
       </div>
     </div>
   </header>
 
   <main class="wrap">
     <div class="prose">
-      <p class="big r">Tem uma ideia pra validar, um MVP pra lançar, um sistema pra tirar do papel ou um processo manual pra automatizar? É exatamente isso que eu faço — <strong>ponta a ponta</strong>, sem repassar pra terceiros.</p>
+      <p class="big r" data-i18n="np_big">Tem uma ideia pra validar, um MVP pra lançar, um sistema pra tirar do papel ou um processo manual pra automatizar? É exatamente isso que eu faço — <strong>ponta a ponta</strong>, sem repassar pra terceiros.</p>
 
-      <h2 class="r">O que eu entrego</h2>
+      <h2 class="r" data-i18n="np_h2_deliver">O que eu entrego</h2>
       <ul class="r">
-        <li><strong>Produto completo, da ideia ao deploy</strong> — web, mobile e API, no ar e monitorado.</li>
-        <li><strong>Automações que rodam sozinhas</strong> — n8n, WhatsApp e Meta integrando seus sistemas.</li>
-        <li><strong>IA dentro do produto</strong> — geração, avaliação e copilotos, onde ela multiplica valor (não como enfeite).</li>
-        <li><strong>Código tipado, testado e seguro</strong> — construído rápido com IA, mas com o julgamento pra confiar no que vai pra produção.</li>
+        <li data-i18n="np_d1"><strong>Produto completo, da ideia ao deploy</strong> — web, mobile e API, no ar e monitorado.</li>
+        <li data-i18n="np_d2"><strong>Automações que rodam sozinhas</strong> — n8n, WhatsApp e Meta integrando seus sistemas.</li>
+        <li data-i18n="np_d3"><strong>IA dentro do produto</strong> — geração, avaliação e copilotos, onde ela multiplica valor (não como enfeite).</li>
+        <li data-i18n="np_d4"><strong>Código tipado, testado e seguro</strong> — construído rápido com IA, mas com o julgamento pra confiar no que vai pra produção.</li>
       </ul>
 
-      <h2 class="r">Como funciona</h2>
+      <h2 class="r" data-i18n="h2_how">Como funciona</h2>
       <ul class="r">
-        <li><strong>1. Conversa rápida</strong> — me conta a dor e o objetivo; eu já devolvo um escopo enxuto.</li>
-        <li><strong>2. Protótipo cedo</strong> — algo navegável pra validar antes de gastar tempo à toa.</li>
-        <li><strong>3. Construo e coloco no ar</strong> — com você acompanhando, do primeiro commit ao deploy.</li>
+        <li data-i18n="np_how1"><strong>1. Conversa rápida</strong> — me conta a dor e o objetivo; eu já devolvo um escopo enxuto.</li>
+        <li data-i18n="np_how2"><strong>2. Protótipo cedo</strong> — algo navegável pra validar antes de gastar tempo à toa.</li>
+        <li data-i18n="np_how3"><strong>3. Construo e coloco no ar</strong> — com você acompanhando, do primeiro commit ao deploy.</li>
       </ul>
 
-      <h2 class="r">Bora construir?</h2>
-      <p class="r">Resposta rápida, sem enrolação. Me chama no WhatsApp ou manda um e-mail — a gente alinha ideia, prazo e orçamento numa boa.</p>
+      <h2 class="r" data-i18n="np_h2_build">Bora construir?</h2>
+      <p class="r" data-i18n="np_build">Resposta rápida, sem enrolação. Me chama no WhatsApp ou manda um e-mail — a gente alinha ideia, prazo e orçamento numa boa.</p>
       <p class="r" style="margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:0.9rem;">
-        <a href="https://wa.me/5553991971031?text=Oi%20Bruno!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20tirar%20um%20projeto%20do%20papel." target="_blank" rel="noopener" class="btn btn-solid" data-magnetic="0.3"><span>Chamar no WhatsApp</span> <span class="ar">↗</span></a>
+        <a href="https://wa.me/5553991971031?text=Oi%20Bruno!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20tirar%20um%20projeto%20do%20papel." target="_blank" rel="noopener" class="btn btn-solid" data-magnetic="0.3"><span data-i18n="h_cta_wa">Chamar no WhatsApp</span> <span class="ar">↗</span></a>
         <a href="https://www.linkedin.com/in/bruno-marques-2516ab214" target="_blank" rel="noopener" class="btn" data-magnetic="0.3"><span>LinkedIn</span> <span class="ar">↗</span></a>
       </p>
     </div>
@@ -84,16 +89,18 @@
 
   <footer class="footer" style="margin-top:4rem;">
     <div class="wrap">
-      <a href="../index.html#projetos" class="back">← Todos os projetos</a>
+      <a href="../index.html#projetos" class="back" data-i18n="foot_all_projects">← Todos os projetos</a>
       <div class="links">
         <a href="https://wa.me/5553991971031" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="mailto:bruno@bcmtechdev.com.br">E-mail</a>
+        <a href="mailto:bruno@bcmtechdev.com.br" data-i18n="foot_email">E-mail</a>
         <a href="https://www.linkedin.com/in/bruno-marques-2516ab214" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/brcmarques-tech" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </footer>
 
+  <script src="../assets/js/i18n-dict.js"></script>
+  <script src="../assets/js/i18n.js"></script>
   <script src="../assets/js/lenis.min.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>

@@ -129,7 +129,15 @@ body.has-cursor, body.has-cursor * { cursor: none !important; }
 .nav-links a:hover { color: var(--ink); } .nav-links a:hover::after { width: 100%; }
 .nav-cta { border: 1px solid var(--line-2); padding: 0.5rem 1rem !important; color: var(--ink) !important; }
 .nav-cta:hover { background: var(--ink); color: var(--bg) !important; }
-@media (max-width: 600px) { .nav-links a.hide-sm { display: none; } }
+/* language switcher */
+.lang { display: inline-flex; gap: 1px; border: 1px solid var(--line-2); padding: 2px; align-self: center; }
+.lang button { font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.1em; font-weight: 700;
+  padding: 0.3rem 0.42rem; color: var(--ink-faint); background: transparent; border: 0; cursor: pointer;
+  text-transform: uppercase; line-height: 1; transition: color .2s var(--ease), background .2s var(--ease); }
+.lang button:hover { color: var(--ink); }
+.lang button[aria-current="true"] { color: #04040a; background: var(--accent); }
+body.has-cursor .lang button { cursor: none; }
+@media (max-width: 600px) { .nav-links a.hide-sm { display: none; } .nav-links { gap: 0.85rem; } }
 
 /* ---------- BUTTONS ---------- */
 .btn { position: relative; display: inline-flex; align-items: center; gap: 0.6rem;

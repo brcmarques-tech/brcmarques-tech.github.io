@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Procure.job — Case · Bruno Marques</title>
-  <meta name="description" content="Procure.job: copiloto com IA para freelancers. Perfil, portfólio e caça de vagas com pontuação. Case de produto por Bruno Marques." />
+  <title data-i18n="pj_title">Procure.job — Case · Bruno Marques</title>
+  <meta name="description" data-i18n="pj_desc" content="Procure.job: copiloto com IA para freelancers. Perfil, portfólio e caça de vagas com pontuação. Case de produto por Bruno Marques." />
   <meta name="theme-color" content="#08080a" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,99 +33,106 @@
         <span>brcmarques<b>.</b>dev</span>
       </a>
       <div class="nav-links">
-        <a href="../index.html#projetos">Projetos</a>
-        <a href="../index.html#contato" class="nav-cta" data-magnetic="0.25">Contato</a>
+        <a href="../index.html#projetos" data-i18n="nav_projects">Projetos</a>
+        <a href="../index.html#contato" class="nav-cta" data-magnetic="0.25" data-i18n="nav_contact">Contato</a>
+        <div class="lang" role="group" aria-label="Idioma / Language / Idioma">
+          <button type="button" data-lang="pt">PT</button>
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="es">ES</button>
+        </div>
       </div>
     </div>
   </nav>
 
   <header class="case-hero">
     <div class="wrap">
-      <a href="../index.html#projetos" class="back">← Voltar aos projetos</a>
-      <span class="eyebrow r" style="display:flex;margin-top:1.6rem;">Produto · SaaS com IA · 2026</span>
+      <a href="../index.html#projetos" class="back" data-i18n="back_projects">← Voltar aos projetos</a>
+      <span class="eyebrow r" style="display:flex;margin-top:1.6rem;" data-i18n="pj_eyebrow">Produto · SaaS com IA · 2026</span>
       <h1 class="display" data-split>Procure<span class="accent">.</span>job</h1>
-      <p class="lead r d2" style="max-width:56ch;">Um copiloto com IA que tira o freelancer do zero: gera perfil e portfólio profissional a partir do currículo, caça vagas em várias fontes, pontua a compatibilidade e prepara as propostas.</p>
+      <p class="lead r d2" style="max-width:56ch;" data-i18n="pj_lead">Um copiloto com IA que tira o freelancer do zero: gera perfil e portfólio profissional a partir do currículo, caça vagas em várias fontes, pontua a compatibilidade e prepara as propostas.</p>
 
       <div class="case-meta r d3">
-        <div class="item"><div class="k">Função</div><div class="v">Produto · design · código</div></div>
+        <div class="item"><div class="k" data-i18n="m_role">Função</div><div class="v" data-i18n="pj_m_role_v">Produto · design · código</div></div>
         <div class="item"><div class="k">Stack</div><div class="v">Next.js 16 · TS · Prisma</div></div>
-        <div class="item"><div class="k">IA</div><div class="v">Claude (Anthropic)</div></div>
-        <div class="item"><div class="k">Status</div><div class="v" style="color:var(--accent)">No ar</div></div>
-        <div class="item"><div class="k">Live</div><div class="v"><a href="https://procure-job.onrender.com" target="_blank" rel="noopener">Abrir ↗</a></div></div>
+        <div class="item"><div class="k" data-i18n="m_ai">IA</div><div class="v">Claude (Anthropic)</div></div>
+        <div class="item"><div class="k" data-i18n="m_status">Status</div><div class="v" style="color:var(--accent)" data-i18n="v_live">No ar</div></div>
+        <div class="item"><div class="k">Live</div><div class="v"><a href="https://procure-job.onrender.com" target="_blank" rel="noopener" data-i18n="v_open">Abrir ↗</a></div></div>
       </div>
     </div>
   </header>
 
   <main class="wrap">
     <div class="prose">
-      <p class="big r">Freelancer bom perde tempo — e vaga — em duas tarefas chatas: montar um portfólio decente e garimpar oportunidades espalhadas por dezenas de plataformas. O Procure.job resolve as duas com IA, num fluxo só.</p>
+      <p class="big r" data-i18n="pj_big">Freelancer bom perde tempo — e vaga — em duas tarefas chatas: montar um portfólio decente e garimpar oportunidades espalhadas por dezenas de plataformas. O Procure.job resolve as duas com IA, num fluxo só.</p>
 
-      <h2 class="r">O problema</h2>
-      <p class="r">A maioria desiste do portfólio e se candidata no escuro, sem saber se tem fit. O resultado é tempo perdido em propostas que não levam a lugar nenhum, e oportunidades boas que passam batido por estarem espalhadas.</p>
+      <h2 class="r" data-i18n="h2_problem">O problema</h2>
+      <p class="r" data-i18n="pj_problem">A maioria desiste do portfólio e se candidata no escuro, sem saber se tem fit. O resultado é tempo perdido em propostas que não levam a lugar nenhum, e oportunidades boas que passam batido por estarem espalhadas.</p>
 
-      <h2 class="r">A solução</h2>
-      <p class="r">Um copiloto que cobre o fluxo inteiro em três passos — <strong>perfil → portfólio → vagas</strong>. A pessoa cola o currículo (ou envia o PDF) e a IA estrutura um perfil profissional, gera uma página de portfólio editorial pronta pra compartilhar, e então busca vagas reais pontuando a compatibilidade de cada uma.</p>
+      <h2 class="r" data-i18n="h2_solution">A solução</h2>
+      <p class="r" data-i18n="pj_solution">Um copiloto que cobre o fluxo inteiro em três passos — <strong>perfil → portfólio → vagas</strong>. A pessoa cola o currículo (ou envia o PDF) e a IA estrutura um perfil profissional, gera uma página de portfólio editorial pronta pra compartilhar, e então busca vagas reais pontuando a compatibilidade de cada uma.</p>
     </div>
 
-    <h2 class="prose r" style="margin-top:3rem;">Da entrada ao perfil</h2>
-    <p class="prose muted r" style="margin-bottom:1rem;">Cole o currículo (ou envie o PDF) e a IA estrutura um perfil profissional — que você ajusta num editor, com geração de imagens por IA inclusa.</p>
+    <h2 class="prose r" style="margin-top:3rem;" data-i18n="pj_h2_input">Da entrada ao perfil</h2>
+    <p class="prose muted r" style="margin-bottom:1rem;" data-i18n="pj_input_desc">Cole o currículo (ou envie o PDF) e a IA estrutura um perfil profissional — que você ajusta num editor, com geração de imagens por IA inclusa.</p>
     <div class="shots two">
-      <figure class="shot r"><img src="../assets/img/procure-job/pj-onboarding.png" alt="Onboarding do Procure.job" loading="lazy" /><figcaption>Entrada — cole o currículo ou envie o PDF; a IA lê pra você.</figcaption></figure>
-      <figure class="shot r d1"><img src="../assets/img/procure-job/pj-editor.png" alt="Editor de perfil" loading="lazy" /><figcaption>Perfil estruturado pela IA, pronto pra ajustar.</figcaption></figure>
+      <figure class="shot r"><img src="../assets/img/procure-job/pj-onboarding.png" data-i18n-alt="pj_alt_onb" alt="Onboarding do Procure.job" loading="lazy" /><figcaption data-i18n="pj_cap_onb">Entrada — cole o currículo ou envie o PDF; a IA lê pra você.</figcaption></figure>
+      <figure class="shot r d1"><img src="../assets/img/procure-job/pj-editor.png" data-i18n-alt="pj_alt_editor" alt="Editor de perfil" loading="lazy" /><figcaption data-i18n="pj_cap_editor">Perfil estruturado pela IA, pronto pra ajustar.</figcaption></figure>
     </div>
 
     <div class="prose">
-      <h2 class="r">Portfólio gerado pela IA</h2>
-      <p class="r">A partir do perfil, a IA monta uma página de portfólio completa — copy, seções e layout editorial — adaptada à área de cada pessoa. Dois exemplos reais, gerados pelo sistema, de áreas totalmente diferentes:</p>
+      <h2 class="r" data-i18n="pj_h2_portfolio">Portfólio gerado pela IA</h2>
+      <p class="r" data-i18n="pj_portfolio">A partir do perfil, a IA monta uma página de portfólio completa — copy, seções e layout editorial — adaptada à área de cada pessoa. Dois exemplos reais, gerados pelo sistema, de áreas totalmente diferentes:</p>
     </div>
     <div class="shots two">
-      <figure class="shot r"><img src="../assets/img/procure-job/pj-site-bruno.png" alt="Portfólio gerado — dev full stack" loading="lazy" /><figcaption>Exemplo: engenheiro full stack & DevOps.</figcaption></figure>
-      <figure class="shot r d1"><img src="../assets/img/procure-job/pj-site-luana.png" alt="Portfólio gerado — tradutora" loading="lazy" /><figcaption>Exemplo: tradutora literária & audiovisual.</figcaption></figure>
+      <figure class="shot r"><img src="../assets/img/procure-job/pj-site-bruno.png" data-i18n-alt="pj_alt_site1" alt="Portfólio gerado — dev full stack" loading="lazy" /><figcaption data-i18n="pj_cap_site1">Exemplo: engenheiro full stack & DevOps.</figcaption></figure>
+      <figure class="shot r d1"><img src="../assets/img/procure-job/pj-site-luana.png" data-i18n-alt="pj_alt_site2" alt="Portfólio gerado — tradutora" loading="lazy" /><figcaption data-i18n="pj_cap_site2">Exemplo: tradutora literária & audiovisual.</figcaption></figure>
     </div>
-    <figure class="full r"><img src="../assets/img/procure-job/pj-editor-full.png" alt="Editor com geração de imagens e regeneração do portfólio" loading="lazy" /><figcaption>Bastidores: skills e experiências estruturadas, imagens geradas por IA e o portfólio regenerável num clique.</figcaption></figure>
+    <figure class="full r"><img src="../assets/img/procure-job/pj-editor-full.png" data-i18n-alt="pj_alt_editorfull" alt="Editor com geração de imagens e regeneração do portfólio" loading="lazy" /><figcaption data-i18n="pj_cap_editorfull">Bastidores: skills e experiências estruturadas, imagens geradas por IA e o portfólio regenerável num clique.</figcaption></figure>
 
     <div class="prose">
-      <h2 class="r">Busca de vagas com pontuação</h2>
-      <p class="r">A IA varre <strong>6 fontes públicas</strong> (Workana, LinkedIn, Remotive, RemoteOK, Arbeitnow, WeWorkRemotely) e ainda caça em marketplaces como o Freelancer.com — encontra as vagas mais relevantes pro perfil, dá uma <strong>nota de compatibilidade</strong> pra cada uma e já prepara a proposta no modo copiloto.</p>
+      <h2 class="r" data-i18n="pj_h2_jobs">Busca de vagas com pontuação</h2>
+      <p class="r" data-i18n="pj_jobs">A IA varre <strong>6 fontes públicas</strong> (Workana, LinkedIn, Remotive, RemoteOK, Arbeitnow, WeWorkRemotely) e ainda caça em marketplaces como o Freelancer.com — encontra as vagas mais relevantes pro perfil, dá uma <strong>nota de compatibilidade</strong> pra cada uma e já prepara a proposta no modo copiloto.</p>
     </div>
-    <figure class="full r"><img src="../assets/img/procure-job/pj-vagas-new.png" alt="Busca de vagas e candidaturas" loading="lazy" /><figcaption>Busca em 6 fontes + caça em marketplaces, com funil de candidaturas.</figcaption></figure>
+    <figure class="full r"><img src="../assets/img/procure-job/pj-vagas-new.png" data-i18n-alt="pj_alt_jobs" alt="Busca de vagas e candidaturas" loading="lazy" /><figcaption data-i18n="pj_cap_jobs">Busca em 6 fontes + caça em marketplaces, com funil de candidaturas.</figcaption></figure>
 
     <div class="prose">
-      <h2 class="r">Tecnologia & decisões</h2>
+      <h2 class="r" data-i18n="h2_tech">Tecnologia & decisões</h2>
       <ul class="r">
-        <li><strong>Front & back:</strong> Next.js 16 (App Router), TypeScript, Tailwind v4, Turbopack.</li>
-        <li><strong>Dados:</strong> Prisma 6 + PostgreSQL, com imagens servidas direto do banco (durável em FS efêmero).</li>
-        <li><strong>IA:</strong> Claude (Anthropic) para perfil, geração de portfólio e avaliação de vagas.</li>
-        <li><strong>Auth & segurança:</strong> sessão assinada (HMAC-SHA256) com expiração embutida, múltiplas contas e isolamento de dados por usuário.</li>
-        <li><strong>Deploy:</strong> Render, com pipeline de deploy automatizado por push.</li>
-        <li><strong>Mobile:</strong> totalmente responsivo, com sensação de app nativo (PWA, safe-areas, bottom-sheets).</li>
+        <li data-i18n="pj_tech1"><strong>Front & back:</strong> Next.js 16 (App Router), TypeScript, Tailwind v4, Turbopack.</li>
+        <li data-i18n="pj_tech2"><strong>Dados:</strong> Prisma 6 + PostgreSQL, com imagens servidas direto do banco (durável em FS efêmero).</li>
+        <li data-i18n="pj_tech3"><strong>IA:</strong> Claude (Anthropic) para perfil, geração de portfólio e avaliação de vagas.</li>
+        <li data-i18n="pj_tech4"><strong>Auth & segurança:</strong> sessão assinada (HMAC-SHA256) com expiração embutida, múltiplas contas e isolamento de dados por usuário.</li>
+        <li data-i18n="pj_tech5"><strong>Deploy:</strong> Render, com pipeline de deploy automatizado por push.</li>
+        <li data-i18n="pj_tech6"><strong>Mobile:</strong> totalmente responsivo, com sensação de app nativo (PWA, safe-areas, bottom-sheets).</li>
       </ul>
 
-      <h2 class="r">Resultado</h2>
-      <p class="r">Um produto completo, no ar e em evolução contínua — projetado e construído de ponta a ponta por uma pessoa só. Do onboarding ao deploy, da modelagem de dados à última animação de mobile.</p>
-      <p class="r" style="margin-top:1.8rem;"><a href="https://procure-job.onrender.com" target="_blank" rel="noopener" class="btn btn-solid" data-magnetic="0.3"><span>Ver ao vivo</span> <span class="ar">↗</span></a></p>
+      <h2 class="r" data-i18n="h2_result">Resultado</h2>
+      <p class="r" data-i18n="pj_result">Um produto completo, no ar e em evolução contínua — projetado e construído de ponta a ponta por uma pessoa só. Do onboarding ao deploy, da modelagem de dados à última animação de mobile.</p>
+      <p class="r" style="margin-top:1.8rem;"><a href="https://procure-job.onrender.com" target="_blank" rel="noopener" class="btn btn-solid" data-magnetic="0.3"><span data-i18n="pj_btn_live">Ver ao vivo</span> <span class="ar">↗</span></a></p>
     </div>
 
     <div class="spacer"></div>
     <div class="divider"></div>
     <div class="spacer-sm"></div>
     <a href="efficlin.html" class="prose r" style="display:block;text-decoration:none;">
-      <span class="eyebrow" style="display:flex;">Próximo projeto</span>
+      <span class="eyebrow" style="display:flex;" data-i18n="next_project">Próximo projeto</span>
       <span class="display" style="font-size:clamp(2rem,6vw,3.5rem);display:block;margin-top:0.6rem;">EffiClin →</span>
     </a>
   </main>
 
   <footer class="footer" style="margin-top:4rem;">
     <div class="wrap">
-      <a href="../index.html#projetos" class="back">← Todos os projetos</a>
+      <a href="../index.html#projetos" class="back" data-i18n="foot_all_projects">← Todos os projetos</a>
       <div class="links">
-        <a href="mailto:bruno@bcmtechdev.com.br">E-mail</a>
+        <a href="mailto:bruno@bcmtechdev.com.br" data-i18n="foot_email">E-mail</a>
         <a href="https://www.linkedin.com/in/bruno-marques-2516ab214" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/brcmarques-tech" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </footer>
 
+  <script src="../assets/js/i18n-dict.js"></script>
+  <script src="../assets/js/i18n.js"></script>
   <script src="../assets/js/lenis.min.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>

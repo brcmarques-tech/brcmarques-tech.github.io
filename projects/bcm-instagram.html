@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Automação Instagram — Case · Bruno Marques</title>
-  <meta name="description" content="Publicação programática no Instagram via Graph API. Case de automação por Bruno Marques." />
+  <title data-i18n="ig_title">Automação Instagram — Case · Bruno Marques</title>
+  <meta name="description" data-i18n="ig_desc" content="Publicação programática no Instagram via Graph API. Case de automação por Bruno Marques." />
   <meta name="theme-color" content="#08080a" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,71 +33,78 @@
         <span>brcmarques<b>.</b>dev</span>
       </a>
       <div class="nav-links">
-        <a href="../index.html#projetos">Projetos</a>
-        <a href="../index.html#contato" class="nav-cta" data-magnetic="0.25">Contato</a>
+        <a href="../index.html#projetos" data-i18n="nav_projects">Projetos</a>
+        <a href="../index.html#contato" class="nav-cta" data-magnetic="0.25" data-i18n="nav_contact">Contato</a>
+        <div class="lang" role="group" aria-label="Idioma / Language / Idioma">
+          <button type="button" data-lang="pt">PT</button>
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="es">ES</button>
+        </div>
       </div>
     </div>
   </nav>
 
   <header class="case-hero">
     <div class="wrap">
-      <a href="../index.html#projetos" class="back">← Voltar aos projetos</a>
-      <span class="eyebrow r" style="display:flex;margin-top:1.6rem;">Automação · Integração de API</span>
-      <h1 class="display" data-split>Automação<br>Instagram</h1>
-      <p class="lead r d2" style="max-width:56ch;">Publicação programática no Instagram da BCM Tecnologias via Instagram Graph API — sem abrir o app, direto da linha de comando.</p>
+      <a href="../index.html#projetos" class="back" data-i18n="back_projects">← Voltar aos projetos</a>
+      <span class="eyebrow r" style="display:flex;margin-top:1.6rem;" data-i18n="ig_eyebrow">Automação · Integração de API</span>
+      <h1 class="display" data-split data-i18n="ig_h1">Automação<br>Instagram</h1>
+      <p class="lead r d2" style="max-width:56ch;" data-i18n="ig_lead">Publicação programática no Instagram da BCM Tecnologias via Instagram Graph API — sem abrir o app, direto da linha de comando.</p>
 
       <div class="case-meta r d3">
-        <div class="item"><div class="k">Função</div><div class="v">Arquitetura · código</div></div>
+        <div class="item"><div class="k" data-i18n="m_role">Função</div><div class="v" data-i18n="ig_m_role_v">Arquitetura · código</div></div>
         <div class="item"><div class="k">Stack</div><div class="v">Node.js · Graph API</div></div>
-        <div class="item"><div class="k">Apoio</div><div class="v">Playwright</div></div>
-        <div class="item"><div class="k">Conta</div><div class="v">@bcmtechs</div></div>
-        <div class="item"><div class="k">Status</div><div class="v" style="color:var(--accent)">Em uso</div></div>
+        <div class="item"><div class="k" data-i18n="m_support">Apoio</div><div class="v">Playwright</div></div>
+        <div class="item"><div class="k" data-i18n="m_account">Conta</div><div class="v">@bcmtechs</div></div>
+        <div class="item"><div class="k" data-i18n="m_status">Status</div><div class="v" style="color:var(--accent)" data-i18n="v_inuse">Em uso</div></div>
       </div>
     </div>
   </header>
 
   <main class="wrap">
     <div class="prose">
-      <p class="big r">Manter a marca ativa no Instagram com consistência consome tempo: montar post, legenda, publicar no horário, repetir. Essa ferramenta tira o trabalho manual do caminho.</p>
+      <p class="big r" data-i18n="ig_big">Manter a marca ativa no Instagram com consistência consome tempo: montar post, legenda, publicar no horário, repetir. Essa ferramenta tira o trabalho manual do caminho.</p>
 
-      <h2 class="r">O problema</h2>
-      <p class="r">Postar com regularidade é o que mantém a marca viva — mas fazer tudo na mão, todo dia, não escala. Cada publicação vira uma sequência de passos repetitivos e sujeitos a esquecimento.</p>
+      <h2 class="r" data-i18n="h2_problem">O problema</h2>
+      <p class="r" data-i18n="ig_problem">Postar com regularidade é o que mantém a marca viva — mas fazer tudo na mão, todo dia, não escala. Cada publicação vira uma sequência de passos repetitivos e sujeitos a esquecimento.</p>
 
-      <h2 class="r">A solução</h2>
-      <p class="r">Uma ferramenta de linha de comando que publica direto na conta da <strong>BCM Tecnologias</strong> usando a <strong>Instagram Graph API</strong> — posts simples e carrosséis, com legenda, de forma programática e repetível.</p>
+      <h2 class="r" data-i18n="h2_solution">A solução</h2>
+      <p class="r" data-i18n="ig_solution">Uma ferramenta de linha de comando que publica direto na conta da <strong>BCM Tecnologias</strong> usando a <strong>Instagram Graph API</strong> — posts simples e carrosséis, com legenda, de forma programática e repetível.</p>
 
-      <h2 class="r">Como funciona</h2>
+      <h2 class="r" data-i18n="h2_how">Como funciona</h2>
       <ul class="r">
-        <li><strong>Graph API:</strong> autenticação por token de sistema e publicação pelos endpoints oficiais da Meta.</li>
-        <li><strong>Carrosséis:</strong> monta o container de mídia múltipla e publica em um comando.</li>
-        <li><strong>Node.js puro:</strong> scripts <code>testar</code> e <code>publicar</code>, sem dependências pesadas.</li>
-        <li><strong>Playwright:</strong> apoio para fluxos que a API ainda não cobre.</li>
+        <li data-i18n="ig_how1"><strong>Graph API:</strong> autenticação por token de sistema e publicação pelos endpoints oficiais da Meta.</li>
+        <li data-i18n="ig_how2"><strong>Carrosséis:</strong> monta o container de mídia múltipla e publica em um comando.</li>
+        <li data-i18n="ig_how3"><strong>Node.js puro:</strong> scripts <code>testar</code> e <code>publicar</code>, sem dependências pesadas.</li>
+        <li data-i18n="ig_how4"><strong>Playwright:</strong> apoio para fluxos que a API ainda não cobre.</li>
       </ul>
 
-      <h2 class="r">Resultado</h2>
-      <p class="r">Publicação confiável e repetível, que tira o trabalho manual do caminho e mantém a marca presente — com previsibilidade.</p>
+      <h2 class="r" data-i18n="h2_result">Resultado</h2>
+      <p class="r" data-i18n="ig_result">Publicação confiável e repetível, que tira o trabalho manual do caminho e mantém a marca presente — com previsibilidade.</p>
     </div>
 
     <div class="spacer"></div>
     <div class="divider"></div>
     <div class="spacer-sm"></div>
     <a href="procure-job.html" class="prose r" style="display:block;text-decoration:none;">
-      <span class="eyebrow" style="display:flex;">Projeto anterior</span>
+      <span class="eyebrow" style="display:flex;" data-i18n="prev_project">Projeto anterior</span>
       <span class="display" style="font-size:clamp(2rem,6vw,3.5rem);display:block;margin-top:0.6rem;">← Procure.job</span>
     </a>
   </main>
 
   <footer class="footer" style="margin-top:4rem;">
     <div class="wrap">
-      <a href="../index.html#projetos" class="back">← Todos os projetos</a>
+      <a href="../index.html#projetos" class="back" data-i18n="foot_all_projects">← Todos os projetos</a>
       <div class="links">
-        <a href="mailto:bruno@bcmtechdev.com.br">E-mail</a>
+        <a href="mailto:bruno@bcmtechdev.com.br" data-i18n="foot_email">E-mail</a>
         <a href="https://www.linkedin.com/in/bruno-marques-2516ab214" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/brcmarques-tech" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </footer>
 
+  <script src="../assets/js/i18n-dict.js"></script>
+  <script src="../assets/js/i18n.js"></script>
   <script src="../assets/js/lenis.min.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>

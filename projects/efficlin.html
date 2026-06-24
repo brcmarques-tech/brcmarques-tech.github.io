@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>EffiClin — Case · Bruno Marques</title>
-  <meta name="description" content="EffiClin: SaaS multi-tenant de gestão para clínicas de fisioterapia. Bruno Marques — Full Stack & DevOps no time, com NestJS, GraphQL e Next.js." />
+  <title data-i18n="eff_title">EffiClin — Case · Bruno Marques</title>
+  <meta name="description" data-i18n="eff_desc" content="EffiClin: SaaS multi-tenant de gestão para clínicas de fisioterapia. Bruno Marques — Full Stack & DevOps no time, com NestJS, GraphQL e Next.js." />
   <meta name="theme-color" content="#08080a" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,24 +33,29 @@
         <span>brcmarques<b>.</b>dev</span>
       </a>
       <div class="nav-links">
-        <a href="../index.html#projetos">Projetos</a>
-        <a href="../index.html#contato" class="nav-cta" data-magnetic="0.25">Contato</a>
+        <a href="../index.html#projetos" data-i18n="nav_projects">Projetos</a>
+        <a href="../index.html#contato" class="nav-cta" data-magnetic="0.25" data-i18n="nav_contact">Contato</a>
+        <div class="lang" role="group" aria-label="Idioma / Language / Idioma">
+          <button type="button" data-lang="pt">PT</button>
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="es">ES</button>
+        </div>
       </div>
     </div>
   </nav>
 
   <header class="case-hero">
     <div class="wrap">
-      <a href="../index.html#projetos" class="back">← Voltar aos projetos</a>
-      <span class="eyebrow r" style="display:flex;margin-top:1.6rem;">SaaS multi-tenant · Saúde · 2024–presente</span>
+      <a href="../index.html#projetos" class="back" data-i18n="back_projects">← Voltar aos projetos</a>
+      <span class="eyebrow r" style="display:flex;margin-top:1.6rem;" data-i18n="eff_eyebrow">SaaS multi-tenant · Saúde · 2024–presente</span>
       <h1 class="display" data-split>EffiClin</h1>
-      <p class="lead r d2" style="max-width:58ch;">Sistema de gestão completo para clínicas de fisioterapia e profissionais da saúde. Um SaaS multi-tenant de verdade — agenda, prontuário, financeiro e CRM — onde atuo como Full Stack & DevOps, num time de 3 desenvolvedores.</p>
+      <p class="lead r d2" style="max-width:58ch;" data-i18n="eff_lead">Sistema de gestão completo para clínicas de fisioterapia e profissionais da saúde. Um SaaS multi-tenant de verdade — agenda, prontuário, financeiro e CRM — onde atuo como Full Stack & DevOps, num time de 3 desenvolvedores.</p>
 
       <div class="case-meta r d3">
-        <div class="item"><div class="k">Função</div><div class="v">Full Stack Dev · DevOps</div></div>
+        <div class="item"><div class="k" data-i18n="m_role">Função</div><div class="v">Full Stack Dev · DevOps</div></div>
         <div class="item"><div class="k">Backend</div><div class="v">NestJS · GraphQL · TypeORM</div></div>
         <div class="item"><div class="k">Frontend</div><div class="v">Next.js · React · Apollo</div></div>
-        <div class="item"><div class="k">Escala</div><div class="v">89 entidades · 82 rotas</div></div>
+        <div class="item"><div class="k" data-i18n="m_scale">Escala</div><div class="v" data-i18n="eff_m_scale_v">89 entidades · 82 rotas</div></div>
         <div class="item"><div class="k">Live</div><div class="v"><a href="https://efficlin.com.br" target="_blank" rel="noopener">efficlin.com.br ↗</a></div></div>
       </div>
     </div>
@@ -58,87 +63,89 @@
 
   <main class="wrap">
     <div class="prose">
-      <p class="big r">"Mais tecnologia na gestão, mais humanização no atendimento." A EffiClin tira a clínica do papel e das planilhas — e por trás dela há uma plataforma multi-tenant robusta, que eu ajudo a construir e a manter em produção.</p>
+      <p class="big r" data-i18n="eff_big">"Mais tecnologia na gestão, mais humanização no atendimento." A EffiClin tira a clínica do papel e das planilhas — e por trás dela há uma plataforma multi-tenant robusta, que eu ajudo a construir e a manter em produção.</p>
     </div>
 
-    <figure class="full r"><img src="../assets/img/efficlin/landing-top.png" alt="Landing page da EffiClin" loading="lazy" /><figcaption>EffiClin — sistema de gestão para fisioterapeutas e profissionais da saúde.</figcaption></figure>
+    <figure class="full r"><img src="../assets/img/efficlin/landing-top.png" data-i18n-alt="eff_alt_landing" alt="Landing page da EffiClin" loading="lazy" /><figcaption data-i18n="eff_cap_landing">EffiClin — sistema de gestão para fisioterapeutas e profissionais da saúde.</figcaption></figure>
 
     <div class="prose">
-      <h2 class="r">O produto</h2>
-      <p class="r">A EffiClin atende <strong>5+ especialidades</strong> (fisioterapia, osteopatia, pilates, RPG e pediatria) num único sistema. Cada clínica é um tenant isolado, com sua própria equipe, agenda, prontuários e financeiro. Destaques de produto:</p>
+      <h2 class="r" data-i18n="eff_h2_product">O produto</h2>
+      <p class="r" data-i18n="eff_product">A EffiClin atende <strong>5+ especialidades</strong> (fisioterapia, osteopatia, pilates, RPG e pediatria) num único sistema. Cada clínica é um tenant isolado, com sua própria equipe, agenda, prontuários e financeiro. Destaques de produto:</p>
       <ul class="r">
-        <li><strong>Avaliação clínica visual:</strong> desenhos anatômicos clicáveis para marcar pontos de dor e acompanhar a evolução do paciente.</li>
-        <li><strong>Agenda automatizada:</strong> agendamento com lembretes e confirmação automática por WhatsApp.</li>
-        <li><strong>Prontuário eletrônico:</strong> fichas customizáveis, histórico e registros clínicos completos.</li>
-        <li><strong>Financeiro completo:</strong> contas a pagar/receber, fluxo de caixa e dashboards.</li>
-        <li><strong>Multiusuário:</strong> equipe colaborando no mesmo ambiente, com controle de acesso.</li>
+        <li data-i18n="eff_prod1"><strong>Avaliação clínica visual:</strong> desenhos anatômicos clicáveis para marcar pontos de dor e acompanhar a evolução do paciente.</li>
+        <li data-i18n="eff_prod2"><strong>Agenda automatizada:</strong> agendamento com lembretes e confirmação automática por WhatsApp.</li>
+        <li data-i18n="eff_prod3"><strong>Prontuário eletrônico:</strong> fichas customizáveis, histórico e registros clínicos completos.</li>
+        <li data-i18n="eff_prod4"><strong>Financeiro completo:</strong> contas a pagar/receber, fluxo de caixa e dashboards.</li>
+        <li data-i18n="eff_prod5"><strong>Multiusuário:</strong> equipe colaborando no mesmo ambiente, com controle de acesso.</li>
       </ul>
 
-      <h2 class="r">A plataforma & meu papel</h2>
-      <p class="r">Atuo como Full Stack & DevOps num time de 3 desenvolvedores — da modelagem de dados ao deploy em produção. A plataforma, por dentro:</p>
+      <h2 class="r" data-i18n="eff_h2_platform">A plataforma & meu papel</h2>
+      <p class="r" data-i18n="eff_platform">Atuo como Full Stack & DevOps num time de 3 desenvolvedores — da modelagem de dados ao deploy em produção. A plataforma, por dentro:</p>
       <ul class="r">
-        <li><strong>Backend (NestJS + Apollo + TypeORM + PostgreSQL):</strong> <strong>89 entidades</strong>, <strong>74 módulos</strong>, <strong>51 resolvers GraphQL</strong> e <strong>53 migrações</strong> cobrindo agenda, prontuário, faturamento e CRM — com camada de CRUD GraphQL automático (nestjs-query) reaproveitada em centenas de tipos.</li>
-        <li><strong>Frontend (Next.js + React + Apollo Client):</strong> <strong>82 rotas</strong> sobre uma biblioteca própria de componentes em <strong>atomic design</strong>, design system híbrido (Chakra UI + Ant Design) e formulários complexos (React Final Form).</li>
-        <li><strong>Avaliação anatômica em canvas:</strong> o desenho do corpo clicável é construído com <strong>react-konva</strong> — o fisioterapeuta marca pontos e desenha sobre a imagem para registrar a evolução.</li>
-        <li><strong>Multi-tenancy real:</strong> isolamento de dados por empresa (company-scoping) via hooks e guards, com escala para múltiplas especialidades no mesmo core.</li>
-        <li><strong>Tempo real & infra:</strong> GraphQL Subscriptions, Redis (cache/filas), Sentry e reCAPTCHA.</li>
+        <li data-i18n="eff_plat1"><strong>Backend (NestJS + Apollo + TypeORM + PostgreSQL):</strong> <strong>89 entidades</strong>, <strong>74 módulos</strong>, <strong>51 resolvers GraphQL</strong> e <strong>53 migrações</strong> cobrindo agenda, prontuário, faturamento e CRM — com camada de CRUD GraphQL automático (nestjs-query) reaproveitada em centenas de tipos.</li>
+        <li data-i18n="eff_plat2"><strong>Frontend (Next.js + React + Apollo Client):</strong> <strong>82 rotas</strong> sobre uma biblioteca própria de componentes em <strong>atomic design</strong>, design system híbrido (Chakra UI + Ant Design) e formulários complexos (React Final Form).</li>
+        <li data-i18n="eff_plat3"><strong>Avaliação anatômica em canvas:</strong> o desenho do corpo clicável é construído com <strong>react-konva</strong> — o fisioterapeuta marca pontos e desenha sobre a imagem para registrar a evolução.</li>
+        <li data-i18n="eff_plat4"><strong>Multi-tenancy real:</strong> isolamento de dados por empresa (company-scoping) via hooks e guards, com escala para múltiplas especialidades no mesmo core.</li>
+        <li data-i18n="eff_plat5"><strong>Tempo real & infra:</strong> GraphQL Subscriptions, Redis (cache/filas), Sentry e reCAPTCHA.</li>
       </ul>
 
-      <h2 class="r">Integrações</h2>
+      <h2 class="r" data-i18n="eff_h2_integ">Integrações</h2>
       <ul class="r">
-        <li><strong>Pagar.me:</strong> cobrança recorrente — planos, ciclos e cupons.</li>
-        <li><strong>Twilio:</strong> SMS e WhatsApp para lembretes e confirmações.</li>
-        <li><strong>Google Calendar</strong> (sincronização de agenda) · <strong>RD Station CRM</strong> · <strong>Puppeteer</strong> (PDFs server-side).</li>
+        <li data-i18n="eff_int1"><strong>Pagar.me:</strong> cobrança recorrente — planos, ciclos e cupons.</li>
+        <li data-i18n="eff_int2"><strong>Twilio:</strong> SMS e WhatsApp para lembretes e confirmações.</li>
+        <li data-i18n="eff_int3"><strong>Google Calendar</strong> (sincronização de agenda) · <strong>RD Station CRM</strong> · <strong>Puppeteer</strong> (PDFs server-side).</li>
       </ul>
 
-      <h2 class="r">DevOps & segurança</h2>
+      <h2 class="r" data-i18n="eff_h2_devops">DevOps & segurança</h2>
       <ul class="r">
-        <li>Pipeline de <strong>CI/CD</strong> próprio e servidores Linux em produção.</li>
-        <li><strong>Migrações TypeORM</strong> em produção, com cuidado de dados.</li>
-        <li><strong>Criptografia em nível de campo</strong> (typeorm-encrypted) para dados sensíveis de saúde.</li>
+        <li data-i18n="eff_dev1">Pipeline de <strong>CI/CD</strong> próprio e servidores Linux em produção.</li>
+        <li data-i18n="eff_dev2"><strong>Migrações TypeORM</strong> em produção, com cuidado de dados.</li>
+        <li data-i18n="eff_dev3"><strong>Criptografia em nível de campo</strong> (typeorm-encrypted) para dados sensíveis de saúde.</li>
       </ul>
     </div>
 
     <div class="prose">
-      <h2 class="r">Por dentro do sistema</h2>
-      <p class="r">Algumas telas do app em uso (ambiente de teste, sem dados reais de paciente). O destaque é a <strong>avaliação anatômica interativa</strong> — exatamente a parte feita com react-konva.</p>
+      <h2 class="r" data-i18n="eff_h2_inside">Por dentro do sistema</h2>
+      <p class="r" data-i18n="eff_inside">Algumas telas do app em uso (ambiente de teste, sem dados reais de paciente). O destaque é a <strong>avaliação anatômica interativa</strong> — exatamente a parte feita com react-konva.</p>
     </div>
-    <figure class="full r"><img src="../assets/img/efficlin/sistema-anatomia.png" alt="Avaliação anatômica interativa da EffiClin (react-konva)" loading="lazy" /><figcaption>Avaliação anatômica em canvas (react-konva): corpo clicável por região, escala de dor EVA e classificação de disfunção — registra a evolução do paciente sessão a sessão.</figcaption></figure>
+    <figure class="full r"><img src="../assets/img/efficlin/sistema-anatomia.png" data-i18n-alt="eff_alt_anat" alt="Avaliação anatômica interativa da EffiClin (react-konva)" loading="lazy" /><figcaption data-i18n="eff_cap_anat">Avaliação anatômica em canvas (react-konva): corpo clicável por região, escala de dor EVA e classificação de disfunção — registra a evolução do paciente sessão a sessão.</figcaption></figure>
     <div class="shots two">
-      <figure class="shot r"><img src="../assets/img/efficlin/sistema-estatisticas.png" alt="Dashboard de estatísticas da EffiClin" loading="lazy" /><figcaption>EffiClin Analytics — atendimentos, taxa de ocupação, receita e desempenho por profissional.</figcaption></figure>
-      <figure class="shot r d1"><img src="../assets/img/efficlin/sistema-agenda.png" alt="Agenda semanal da EffiClin" loading="lazy" /><figcaption>Agenda semanal — com sincronização (Google Calendar), bloqueios e gestão de horários.</figcaption></figure>
+      <figure class="shot r"><img src="../assets/img/efficlin/sistema-estatisticas.png" data-i18n-alt="eff_alt_stats" alt="Dashboard de estatísticas da EffiClin" loading="lazy" /><figcaption data-i18n="eff_cap_stats">EffiClin Analytics — atendimentos, taxa de ocupação, receita e desempenho por profissional.</figcaption></figure>
+      <figure class="shot r d1"><img src="../assets/img/efficlin/sistema-agenda.png" data-i18n-alt="eff_alt_agenda" alt="Agenda semanal da EffiClin" loading="lazy" /><figcaption data-i18n="eff_cap_agenda">Agenda semanal — com sincronização (Google Calendar), bloqueios e gestão de horários.</figcaption></figure>
     </div>
     <div class="shots two">
-      <figure class="shot r"><img src="../assets/img/efficlin/sistema-tratamentos.png" alt="Módulo de tratamentos da EffiClin" loading="lazy" /><figcaption>Módulo de tratamentos — modelos anatômicos (crânio, corpo, coluna) e o EffiClin Studio.</figcaption></figure>
-      <figure class="shot r d1"><img src="../assets/img/efficlin/sistema-servicos.png" alt="Catálogo de serviços da EffiClin" loading="lazy" /><figcaption>Catálogo de serviços — duração, valor por sessão e comissão por profissional.</figcaption></figure>
+      <figure class="shot r"><img src="../assets/img/efficlin/sistema-tratamentos.png" data-i18n-alt="eff_alt_treat" alt="Módulo de tratamentos da EffiClin" loading="lazy" /><figcaption data-i18n="eff_cap_treat">Módulo de tratamentos — modelos anatômicos (crânio, corpo, coluna) e o EffiClin Studio.</figcaption></figure>
+      <figure class="shot r d1"><img src="../assets/img/efficlin/sistema-servicos.png" data-i18n-alt="eff_alt_serv" alt="Catálogo de serviços da EffiClin" loading="lazy" /><figcaption data-i18n="eff_cap_serv">Catálogo de serviços — duração, valor por sessão e comissão por profissional.</figcaption></figure>
     </div>
 
     <div class="prose">
-      <h2 class="r">Resultado</h2>
-      <p class="r">Uma plataforma de saúde real, multi-tenant, em produção e usada por clínicas — com a complexidade de um ERP clínico (agenda + prontuário + financeiro + CRM) sustentada por uma arquitetura que eu posso defender linha a linha.</p>
-      <p class="r" style="margin-top:1.8rem;"><a href="https://efficlin.com.br" target="_blank" rel="noopener" class="btn btn-solid" data-magnetic="0.3"><span>Ver o produto</span> <span class="ar">↗</span></a></p>
+      <h2 class="r" data-i18n="h2_result">Resultado</h2>
+      <p class="r" data-i18n="eff_result">Uma plataforma de saúde real, multi-tenant, em produção e usada por clínicas — com a complexidade de um ERP clínico (agenda + prontuário + financeiro + CRM) sustentada por uma arquitetura que eu posso defender linha a linha.</p>
+      <p class="r" style="margin-top:1.8rem;"><a href="https://efficlin.com.br" target="_blank" rel="noopener" class="btn btn-solid" data-magnetic="0.3"><span data-i18n="eff_btn">Ver o produto</span> <span class="ar">↗</span></a></p>
     </div>
 
     <div class="spacer"></div>
     <div class="divider"></div>
     <div class="spacer-sm"></div>
     <a href="bcm-shopping.html" class="prose r" style="display:block;text-decoration:none;">
-      <span class="eyebrow" style="display:flex;">Próximo projeto</span>
+      <span class="eyebrow" style="display:flex;" data-i18n="next_project">Próximo projeto</span>
       <span class="display" style="font-size:clamp(2rem,6vw,3.5rem);display:block;margin-top:0.6rem;">bcmTech Shopping →</span>
     </a>
   </main>
 
   <footer class="footer" style="margin-top:4rem;">
     <div class="wrap">
-      <a href="../index.html#projetos" class="back">← Todos os projetos</a>
+      <a href="../index.html#projetos" class="back" data-i18n="foot_all_projects">← Todos os projetos</a>
       <div class="links">
-        <a href="mailto:bruno@bcmtechdev.com.br">E-mail</a>
+        <a href="mailto:bruno@bcmtechdev.com.br" data-i18n="foot_email">E-mail</a>
         <a href="https://github.com/brcmarques-tech" target="_blank" rel="noopener">GitHub</a>
         <a href="https://linkedin.com/in/bruno-marques-2516ab214" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
   </footer>
 
+  <script src="../assets/js/i18n-dict.js"></script>
+  <script src="../assets/js/i18n.js"></script>
   <script src="../assets/js/lenis.min.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>

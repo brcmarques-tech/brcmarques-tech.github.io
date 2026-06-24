@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>bcmTech Shopping — Case · Bruno Marques</title>
-  <meta name="description" content="bcmTech Shopping: plataforma de delivery e marketplace estilo iFood. App do cliente, painéis de lojista e admin, pagamentos com split e rastreamento em tempo real. Case por Bruno Marques." />
+  <title data-i18n="bcm_title">bcmTech Shopping — Case · Bruno Marques</title>
+  <meta name="description" data-i18n="bcm_desc" content="bcmTech Shopping: plataforma de delivery e marketplace estilo iFood. App do cliente, painéis de lojista e admin, pagamentos com split e rastreamento em tempo real. Case por Bruno Marques." />
   <meta name="theme-color" content="#08080a" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,111 +33,118 @@
         <span>brcmarques<b>.</b>dev</span>
       </a>
       <div class="nav-links">
-        <a href="../index.html#projetos">Projetos</a>
-        <a href="../index.html#contato" class="nav-cta" data-magnetic="0.25">Contato</a>
+        <a href="../index.html#projetos" data-i18n="nav_projects">Projetos</a>
+        <a href="../index.html#contato" class="nav-cta" data-magnetic="0.25" data-i18n="nav_contact">Contato</a>
+        <div class="lang" role="group" aria-label="Idioma / Language / Idioma">
+          <button type="button" data-lang="pt">PT</button>
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="es">ES</button>
+        </div>
       </div>
     </div>
   </nav>
 
   <header class="case-hero">
     <div class="wrap">
-      <a href="../index.html#projetos" class="back">← Voltar aos projetos</a>
-      <span class="eyebrow r" style="display:flex;margin-top:1.6rem;">Produto · Marketplace de delivery · 2026</span>
+      <a href="../index.html#projetos" class="back" data-i18n="back_projects">← Voltar aos projetos</a>
+      <span class="eyebrow r" style="display:flex;margin-top:1.6rem;" data-i18n="bcm_eyebrow">Produto · Marketplace de delivery · 2026</span>
       <h1 class="display" data-split>bcm<span class="accent">Tech</span> Shopping</h1>
-      <p class="lead r d2" style="max-width:58ch;">Uma plataforma de delivery e marketplace no estilo iFood — quatro aplicações integradas: app do cliente, painel do lojista, painel super-admin e uma API central. Pagamentos com split, rastreamento de entrega em tempo real e multi-perfil (cliente, lojista, entregador e admin).</p>
+      <p class="lead r d2" style="max-width:58ch;" data-i18n="bcm_lead">Uma plataforma de delivery e marketplace no estilo iFood — quatro aplicações integradas: app do cliente, painel do lojista, painel super-admin e uma API central. Pagamentos com split, rastreamento de entrega em tempo real e multi-perfil (cliente, lojista, entregador e admin).</p>
 
       <div class="case-meta r d3">
-        <div class="item"><div class="k">Função</div><div class="v">Arquitetura · back · front · mobile</div></div>
+        <div class="item"><div class="k" data-i18n="m_role">Função</div><div class="v" data-i18n="bcm_m_role_v">Arquitetura · back · front · mobile</div></div>
         <div class="item"><div class="k">Back-end</div><div class="v">NestJS · GraphQL · PostgreSQL</div></div>
-        <div class="item"><div class="k">Painéis</div><div class="v">Next.js 16 · React 19</div></div>
+        <div class="item"><div class="k" data-i18n="m_panels">Painéis</div><div class="v">Next.js 16 · React 19</div></div>
         <div class="item"><div class="k">Mobile</div><div class="v">React Native · Expo</div></div>
-        <div class="item"><div class="k">Tempo real</div><div class="v">WebSocket · Subscriptions</div></div>
+        <div class="item"><div class="k" data-i18n="m_realtime">Tempo real</div><div class="v">WebSocket · Subscriptions</div></div>
       </div>
     </div>
   </header>
 
   <main class="wrap">
     <div class="prose">
-      <p class="big r">Um marketplace de delivery de verdade não é um app — são quatro sistemas conversando: quem pede, quem vende, quem entrega e quem administra. O bcmTech Shopping cobre os quatro, sobre uma única API em GraphQL, com pagamento e rastreamento em tempo real.</p>
+      <p class="big r" data-i18n="bcm_big">Um marketplace de delivery de verdade não é um app — são quatro sistemas conversando: quem pede, quem vende, quem entrega e quem administra. O bcmTech Shopping cobre os quatro, sobre uma única API em GraphQL, com pagamento e rastreamento em tempo real.</p>
 
-      <h2 class="r">O problema</h2>
-      <p class="r">Montar uma operação de delivery exige muito mais que uma vitrine: precisa de catálogo por loja, carrinho e checkout, repasse financeiro para o lojista, acompanhamento da entrega ao vivo, e uma camada de administração para moderar lojas, usuários e pagamentos. Tudo isso precisa estar sincronizado, em tempo real, entre perfis com permissões diferentes.</p>
+      <h2 class="r" data-i18n="h2_problem">O problema</h2>
+      <p class="r" data-i18n="bcm_problem">Montar uma operação de delivery exige muito mais que uma vitrine: precisa de catálogo por loja, carrinho e checkout, repasse financeiro para o lojista, acompanhamento da entrega ao vivo, e uma camada de administração para moderar lojas, usuários e pagamentos. Tudo isso precisa estar sincronizado, em tempo real, entre perfis com permissões diferentes.</p>
 
-      <h2 class="r">A arquitetura</h2>
-      <p class="r">Quatro aplicações integradas sobre uma API central — todas falando <strong>GraphQL</strong> (HTTP + WebSocket para atualizações ao vivo):</p>
+      <h2 class="r" data-i18n="h2_arch">A arquitetura</h2>
+      <p class="r" data-i18n="bcm_arch">Quatro aplicações integradas sobre uma API central — todas falando <strong>GraphQL</strong> (HTTP + WebSocket para atualizações ao vivo):</p>
       <ul class="r">
-        <li><strong>delivery-api</strong> — o cérebro: NestJS + TypeScript, GraphQL (Apollo), TypeORM, PostgreSQL, Redis + Bull para filas, e subscriptions via WebSocket.</li>
-        <li><strong>App do cliente</strong> — React Native + Expo: navega por lojas, monta o carrinho, fecha pedido (PIX, cartão ou na entrega) e acompanha a entrega em tempo real.</li>
-        <li><strong>Painel do lojista</strong> — Next.js 16: produtos, categorias, pedidos ao vivo, promoções, cupons, analytics, recebimentos e planos de assinatura.</li>
-        <li><strong>Painel super-admin</strong> — Next.js 16: métricas e gráficos, gestão de usuários, lojas, pedidos, pagamentos, aprovações e configurações da plataforma.</li>
+        <li data-i18n="bcm_arch1"><strong>delivery-api</strong> — o cérebro: NestJS + TypeScript, GraphQL (Apollo), TypeORM, PostgreSQL, Redis + Bull para filas, e subscriptions via WebSocket.</li>
+        <li data-i18n="bcm_arch2"><strong>App do cliente</strong> — React Native + Expo: navega por lojas, monta o carrinho, fecha pedido (PIX, cartão ou na entrega) e acompanha a entrega em tempo real.</li>
+        <li data-i18n="bcm_arch3"><strong>Painel do lojista</strong> — Next.js 16: produtos, categorias, pedidos ao vivo, promoções, cupons, analytics, recebimentos e planos de assinatura.</li>
+        <li data-i18n="bcm_arch4"><strong>Painel super-admin</strong> — Next.js 16: métricas e gráficos, gestão de usuários, lojas, pedidos, pagamentos, aprovações e configurações da plataforma.</li>
       </ul>
     </div>
 
-    <h2 class="prose r" style="margin-top:3rem;">Painel super-admin</h2>
-    <p class="prose muted r" style="margin-bottom:1rem;">Visão de plataforma: receita, pedidos e usuários consolidados, com gráfico de vendas dos últimos 30 dias e gestão de todas as lojas.</p>
-    <figure class="full r"><img src="../assets/img/bcm-shopping/sa-dashboard.png" alt="Dashboard do super-admin com métricas e gráfico de receita" loading="lazy" /><figcaption>Dashboard administrativo — receita total, pedidos, usuários e gráfico de 30 dias.</figcaption></figure>
-    <figure class="full r"><img src="../assets/img/bcm-shopping/sa-lojas.png" alt="Gestão de lojas no super-admin" loading="lazy" /><figcaption>Gestão de lojas — dados comerciais, verificação e métricas por loja.</figcaption></figure>
+    <h2 class="prose r" style="margin-top:3rem;" data-i18n="bcm_h2_sa">Painel super-admin</h2>
+    <p class="prose muted r" style="margin-bottom:1rem;" data-i18n="bcm_sa_desc">Visão de plataforma: receita, pedidos e usuários consolidados, com gráfico de vendas dos últimos 30 dias e gestão de todas as lojas.</p>
+    <figure class="full r"><img src="../assets/img/bcm-shopping/sa-dashboard.png" data-i18n-alt="bcm_alt_sa1" alt="Dashboard do super-admin com métricas e gráfico de receita" loading="lazy" /><figcaption data-i18n="bcm_cap_sa1">Dashboard administrativo — receita total, pedidos, usuários e gráfico de 30 dias.</figcaption></figure>
+    <figure class="full r"><img src="../assets/img/bcm-shopping/sa-lojas.png" data-i18n-alt="bcm_alt_sa2" alt="Gestão de lojas no super-admin" loading="lazy" /><figcaption data-i18n="bcm_cap_sa2">Gestão de lojas — dados comerciais, verificação e métricas por loja.</figcaption></figure>
 
     <div class="prose">
-      <h2 class="r">Painel do lojista</h2>
-      <p class="r">O lojista gerencia tudo da própria operação: cadastro de várias lojas, pedidos chegando em tempo real (aceitar, preparar, despachar), e — nos planos pagos — promoções, cupons e analytics. O plano é controlado pelo super-admin (FREE → PRO → PREMIUM → ENTERPRISE).</p>
+      <h2 class="r" data-i18n="bcm_h2_vendor">Painel do lojista</h2>
+      <p class="r" data-i18n="bcm_vendor">O lojista gerencia tudo da própria operação: cadastro de várias lojas, pedidos chegando em tempo real (aceitar, preparar, despachar), e — nos planos pagos — promoções, cupons e analytics. O plano é controlado pelo super-admin (FREE → PRO → PREMIUM → ENTERPRISE).</p>
     </div>
     <div class="shots two">
-      <figure class="shot r"><img src="../assets/img/bcm-shopping/vendor-visao.png" alt="Visão geral do lojista com várias lojas" loading="lazy" /><figcaption>Visão geral — múltiplas lojas, com status e métricas.</figcaption></figure>
-      <figure class="shot r d1"><img src="../assets/img/bcm-shopping/vendor-analytics.png" alt="Analytics do lojista" loading="lazy" /><figcaption>Analytics — faturamento, conversão e gráfico por dia.</figcaption></figure>
+      <figure class="shot r"><img src="../assets/img/bcm-shopping/vendor-visao.png" data-i18n-alt="bcm_alt_v1" alt="Visão geral do lojista com várias lojas" loading="lazy" /><figcaption data-i18n="bcm_cap_v1">Visão geral — múltiplas lojas, com status e métricas.</figcaption></figure>
+      <figure class="shot r d1"><img src="../assets/img/bcm-shopping/vendor-analytics.png" data-i18n-alt="bcm_alt_v2" alt="Analytics do lojista" loading="lazy" /><figcaption data-i18n="bcm_cap_v2">Analytics — faturamento, conversão e gráfico por dia.</figcaption></figure>
     </div>
-    <figure class="full r"><img src="../assets/img/bcm-shopping/vendor-pedidos.png" alt="Pedidos em tempo real no painel do lojista" loading="lazy" /><figcaption>Pedidos ao vivo — abas de ativos, concluídos e não concluídos, com itens e ações.</figcaption></figure>
-    <figure class="full r"><img src="../assets/img/bcm-shopping/vendor-plano.png" alt="Planos de assinatura do lojista" loading="lazy" /><figcaption>Planos de assinatura — do gratuito ao Enterprise, com recursos progressivos.</figcaption></figure>
+    <figure class="full r"><img src="../assets/img/bcm-shopping/vendor-pedidos.png" data-i18n-alt="bcm_alt_v3" alt="Pedidos em tempo real no painel do lojista" loading="lazy" /><figcaption data-i18n="bcm_cap_v3">Pedidos ao vivo — abas de ativos, concluídos e não concluídos, com itens e ações.</figcaption></figure>
+    <figure class="full r"><img src="../assets/img/bcm-shopping/vendor-plano.png" data-i18n-alt="bcm_alt_v4" alt="Planos de assinatura do lojista" loading="lazy" /><figcaption data-i18n="bcm_cap_v4">Planos de assinatura — do gratuito ao Enterprise, com recursos progressivos.</figcaption></figure>
 
     <div class="prose">
-      <h2 class="r">App do cliente</h2>
-      <p class="r">Multiplataforma (iOS, Android e web) em React Native + Expo. Da descoberta de lojas ao checkout com pagamento e rastreamento — com a interface acabada que o usuário final espera.</p>
+      <h2 class="r" data-i18n="bcm_h2_app">App do cliente</h2>
+      <p class="r" data-i18n="bcm_app">Multiplataforma (iOS, Android e web) em React Native + Expo. Da descoberta de lojas ao checkout com pagamento e rastreamento — com a interface acabada que o usuário final espera.</p>
     </div>
     <div class="shots two">
-      <figure class="shot r"><img src="../assets/img/bcm-shopping/app-login.png" alt="Tela de login do app" loading="lazy" /><figcaption>Entrada — login com e-mail ou Google.</figcaption></figure>
-      <figure class="shot r d1"><img src="../assets/img/bcm-shopping/app-home.png" alt="Home do app do cliente" loading="lazy" /><figcaption>Home — recomprar, mais vendidos e lojas favoritas.</figcaption></figure>
+      <figure class="shot r"><img src="../assets/img/bcm-shopping/app-login.png" data-i18n-alt="bcm_alt_a1" alt="Tela de login do app" loading="lazy" /><figcaption data-i18n="bcm_cap_a1">Entrada — login com e-mail ou Google.</figcaption></figure>
+      <figure class="shot r d1"><img src="../assets/img/bcm-shopping/app-home.png" data-i18n-alt="bcm_alt_a2" alt="Home do app do cliente" loading="lazy" /><figcaption data-i18n="bcm_cap_a2">Home — recomprar, mais vendidos e lojas favoritas.</figcaption></figure>
     </div>
     <div class="shots two">
-      <figure class="shot r"><img src="../assets/img/bcm-shopping/app-busca.png" alt="Busca de lojas e produtos" loading="lazy" /><figcaption>Busca — por categoria, produtos, serviços e lojas.</figcaption></figure>
-      <figure class="shot r d1"><img src="../assets/img/bcm-shopping/app-loja.png" alt="Tela de loja com produtos" loading="lazy" /><figcaption>Loja — catálogo por categoria, com adicionar ao carrinho.</figcaption></figure>
+      <figure class="shot r"><img src="../assets/img/bcm-shopping/app-busca.png" data-i18n-alt="bcm_alt_a3" alt="Busca de lojas e produtos" loading="lazy" /><figcaption data-i18n="bcm_cap_a3">Busca — por categoria, produtos, serviços e lojas.</figcaption></figure>
+      <figure class="shot r d1"><img src="../assets/img/bcm-shopping/app-loja.png" data-i18n-alt="bcm_alt_a4" alt="Tela de loja com produtos" loading="lazy" /><figcaption data-i18n="bcm_cap_a4">Loja — catálogo por categoria, com adicionar ao carrinho.</figcaption></figure>
     </div>
 
     <div class="prose">
-      <h2 class="r">Tecnologia & decisões</h2>
+      <h2 class="r" data-i18n="h2_tech">Tecnologia & decisões</h2>
       <ul class="r">
-        <li><strong>API:</strong> NestJS + TypeScript, GraphQL (Apollo Server), TypeORM + PostgreSQL, Redis + Bull para filas assíncronas.</li>
-        <li><strong>Tempo real:</strong> GraphQL Subscriptions sobre WebSocket — pedidos e localização de entregadores atualizando ao vivo.</li>
-        <li><strong>Pagamentos:</strong> Pagar.me com <strong>split</strong> — o valor vai 100% para a plataforma e é repassado ao lojista só após a entrega confirmada.</li>
-        <li><strong>Multi-perfil:</strong> cliente, lojista, entregador e super-admin, com guards e permissões por papel (JWT).</li>
-        <li><strong>Integrações:</strong> Cloudinary (imagens), Expo Push (notificações), Resend (e-mail), WhatsApp (WAHA) e automação com IA via N8N.</li>
-        <li><strong>Painéis:</strong> Next.js 16 + React 19 + Tailwind, com dark mode e gráficos (Recharts).</li>
-        <li><strong>Mobile:</strong> React Native + Expo Router, mapas, biometria e rastreamento em background.</li>
+        <li data-i18n="bcm_tech1"><strong>API:</strong> NestJS + TypeScript, GraphQL (Apollo Server), TypeORM + PostgreSQL, Redis + Bull para filas assíncronas.</li>
+        <li data-i18n="bcm_tech2"><strong>Tempo real:</strong> GraphQL Subscriptions sobre WebSocket — pedidos e localização de entregadores atualizando ao vivo.</li>
+        <li data-i18n="bcm_tech3"><strong>Pagamentos:</strong> Pagar.me com <strong>split</strong> — o valor vai 100% para a plataforma e é repassado ao lojista só após a entrega confirmada.</li>
+        <li data-i18n="bcm_tech4"><strong>Multi-perfil:</strong> cliente, lojista, entregador e super-admin, com guards e permissões por papel (JWT).</li>
+        <li data-i18n="bcm_tech5"><strong>Integrações:</strong> Cloudinary (imagens), Expo Push (notificações), Resend (e-mail), WhatsApp (WAHA) e automação com IA via N8N.</li>
+        <li data-i18n="bcm_tech6"><strong>Painéis:</strong> Next.js 16 + React 19 + Tailwind, com dark mode e gráficos (Recharts).</li>
+        <li data-i18n="bcm_tech7"><strong>Mobile:</strong> React Native + Expo Router, mapas, biometria e rastreamento em background.</li>
       </ul>
 
-      <h2 class="r">Resultado</h2>
-      <p class="r">Uma plataforma de delivery completa, ponta a ponta — da modelagem do banco e da API aos dois painéis web e ao app mobile, com pagamento real, tempo real e múltiplos perfis. Arquitetura distribuída que reflete uma operação de marketplace de verdade.</p>
+      <h2 class="r" data-i18n="h2_result">Resultado</h2>
+      <p class="r" data-i18n="bcm_result">Uma plataforma de delivery completa, ponta a ponta — da modelagem do banco e da API aos dois painéis web e ao app mobile, com pagamento real, tempo real e múltiplos perfis. Arquitetura distribuída que reflete uma operação de marketplace de verdade.</p>
     </div>
 
     <div class="spacer"></div>
     <div class="divider"></div>
     <div class="spacer-sm"></div>
     <a href="seu-projeto.html" class="prose r" style="display:block;text-decoration:none;">
-      <span class="eyebrow" style="display:flex;">Próximo projeto</span>
-      <span class="display" style="font-size:clamp(2rem,6vw,3.5rem);display:block;margin-top:0.6rem;">O próximo é o seu →</span>
+      <span class="eyebrow" style="display:flex;" data-i18n="next_project">Próximo projeto</span>
+      <span class="display" style="font-size:clamp(2rem,6vw,3.5rem);display:block;margin-top:0.6rem;" data-i18n="np_next_label">O próximo é o seu →</span>
     </a>
   </main>
 
   <footer class="footer" style="margin-top:4rem;">
     <div class="wrap">
-      <a href="../index.html#projetos" class="back">← Todos os projetos</a>
+      <a href="../index.html#projetos" class="back" data-i18n="foot_all_projects">← Todos os projetos</a>
       <div class="links">
-        <a href="mailto:bruno@bcmtechdev.com.br">E-mail</a>
+        <a href="mailto:bruno@bcmtechdev.com.br" data-i18n="foot_email">E-mail</a>
         <a href="https://www.linkedin.com/in/bruno-marques-2516ab214" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/brcmarques-tech" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </footer>
 
+  <script src="../assets/js/i18n-dict.js"></script>
+  <script src="../assets/js/i18n.js"></script>
   <script src="../assets/js/lenis.min.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>
