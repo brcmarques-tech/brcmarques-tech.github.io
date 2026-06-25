@@ -256,6 +256,40 @@
   /* ---------- YEAR ---------- */
   function initYear() { $$("[data-year]").forEach((e) => (e.textContent = new Date().getFullYear())); }
 
+  /* ---------- EMAIL: copiar ao clicar (fallback p/ quem não tem app de e-mail) ---------- */
+  function initEmailCopy() {
+    const links = $$('a[href^="mailto:"]');
+    if (!links.length) return;
+    const L = (document.documentElement.lang || "pt").slice(0, 2);
+    const MSG = { pt: "E-mail copiado!", en: "Email copied!", es: "¡Email copiado!" };
+    let toast;
+    const showToast = (msg) => {
+      if (!toast) {
+        toast = document.createElement("div");
+        toast.setAttribute("role", "status");
+        toast.setAttribute("aria-live", "polite");
+        toast.style.cssText = "position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(12px);background:#0e1726;color:#e8eef7;border:1px solid rgba(120,150,200,.32);padding:.7rem 1.1rem;border-radius:10px;font:600 .9rem/1.2 system-ui,-apple-system,sans-serif;z-index:9999;opacity:0;transition:opacity .25s ease,transform .25s ease;pointer-events:none;box-shadow:0 12px 34px rgba(0,0,0,.45)";
+        document.body.appendChild(toast);
+      }
+      toast.textContent = msg;
+      requestAnimationFrame(() => { toast.style.opacity = "1"; toast.style.transform = "translateX(-50%) translateY(0)"; });
+      clearTimeout(toast._t);
+      toast._t = setTimeout(() => { toast.style.opacity = "0"; toast.style.transform = "translateX(-50%) translateY(12px)"; }, 2600);
+    };
+    links.forEach((a) => {
+      a.addEventListener("click", () => {
+        // não usa preventDefault: se houver app de e-mail, o mailto abre o compose normalmente.
+        const email = a.getAttribute("href").replace(/^mailto:/i, "").split("?")[0];
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(
+            () => showToast((MSG[L] || MSG.pt) + "  " + email),
+            () => {}
+          );
+        }
+      });
+    });
+  }
+
   /* ---------- BOOT ---------- */
   function boot() {
     initSplit();
@@ -274,6 +308,7 @@
     initHeroCanvas();
     initParallax();
     initYear();
+    initEmailCopy();
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
   else boot();
